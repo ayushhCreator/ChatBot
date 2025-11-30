@@ -93,8 +93,8 @@ class Config:
     
     # DSPy/LLM Settings
     OLLAMA_BASE_URL = "http://localhost:11434"
-    MODEL_NAME = "gemma3:4b"  # 4B parameter model for CPU
-    MAX_TOKENS = 5000
+    MODEL_NAME = "gemma3:4b"  # Better model for structured outputs (4.3B params)
+    MAX_TOKENS = 8000
     TEMPERATURE = 0.3  # Lower for consistency
     
     # Conversation Settings

@@ -10,6 +10,7 @@ from typing import Optional, Dict, Any
 
 from orchestrator.message_processor import MessageProcessor
 from dspy_config import dspy_configurator
+from chat_api import router as chat_router
 
 # Backward compatibility: ChatbotOrchestrator is now MessageProcessor
 ChatbotOrchestrator = MessageProcessor
@@ -101,6 +102,19 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan
 )
+
+# Add CORS middleware for Next.js frontend
+from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://localhost:3001"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Include streaming chat router
+app.include_router(chat_router)
 
 
 # Pydantic models

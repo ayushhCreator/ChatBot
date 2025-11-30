@@ -11,3 +11,10 @@ wheels/
 .ruff_cache/
 .env
 .env.*
+/node_modules
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.sqlite3
+*.db

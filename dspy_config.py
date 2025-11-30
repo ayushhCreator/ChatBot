@@ -27,7 +27,8 @@ class DSPyConfigurator:
             model=model_with_provider,
             api_base=base_url,
             max_tokens=config.MAX_TOKENS,
-            temperature=config.TEMPERATURE
+            temperature=config.TEMPERATURE,
+            timeout=15.0  # 15 second timeout for each LLM request
         )
         
         # Set as default LM for DSPy
