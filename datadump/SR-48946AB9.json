@@ -1,0 +1,32 @@
+{
+  "service_request_id": "SR-48946AB9",
+  "conversation_id": "phase2_edit_confirmation_20251130_144954",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:52:47.013781",
+  "customer": {
+    "first_name": "Priya",
+    "last_name": "Sharma",
+    "full_name": "Priya Sharma",
+    "phone": "8765432109"
+  },
+  "vehicle": {
+    "brand": "BMW",
+    "model": "X5",
+    "plate": "GJ01CD5678"
+  },
+  "appointment": {
+    "date": "2025-12-06",
+    "first_name": "Priya",
+    "last_name": "Sharma",
+    "full_name": "Priya Sharma",
+    "phone": "8765432109",
+    "vehicle_brand": "BMW",
+    "vehicle_model": "X5",
+    "vehicle_plate": "GJ01CD5678"
+  },
+  "metadata": {
+    "completeness": 93.8,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

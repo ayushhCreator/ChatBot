@@ -1,0 +1,294 @@
+=================================================================================
+COMPLETE ARCHITECTURAL FLOW DIAGRAM
+=================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          USER INPUT → OUTPUT                                │
+│                         (12-PHASE ORCHESTRATION)                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                                    ╔═══════════════╗
+                                    ║   USER INPUT  ║
+                                    ║ /chat endpoint║
+                                    ╚═══════╤═══════╝
+                                            │
+                        ┌───────────────────┼───────────────────┐
+                        │                   │                   │
+                        ▼                   ▼                   ▼
+                    ╔════════════╗    ╔════════════╗    ╔════════════╗
+                    ║ Sentiment  ║    ║  Intent    ║    ║  Message   ║
+                    ║ Analyzer   ║    ║ Classifier ║    ║  Storage   ║
+                    ╚══════╤═════╝    ╚══════╤═════╝    ╚══════╤═════╝
+                           │                 │                 │
+                ┌─ anger   ├─ intent class   │                 │
+                ├─ interest│  "book"         │                 │
+                ├─ disgust │  "inquire"      │                 │
+                ├─ boredom │  "complaint"    │                 │
+                └─ neutral │                 │                 │
+                           └──────────────┬──┴─────────────────┘
+                                          │
+                                          ▼
+                           ╔════════════════════════════╗
+                           ║     TEMPLATE MODE         ║
+                           ║      DECISION             ║
+                           ║ (Intent overrides sentiment)               
+                           ╚════════════╤═══════════════╝
+                                        │
+                ┌───────────┬──────────┬───────────┬──────────┐
+                │           │          │           │          │
+                ▼           ▼          ▼           ▼          ▼
+        ┌────────────┐ ┌────────┐ ┌────────────┐ ┌──────────┐
+        │ LLM ONLY   │ │ TEMP   │ │ LLM THEN   │ │ TEMP THEN│
+        │            │ │ ONLY   │ │ TEMPLATE   │ │ LLM      │
+        └────────────┘ └────────┘ └────────────┘ └──────────┘
+                │           │          │           │
+                └───────────┴──────────┴───────────┘
+                                        │
+                                        ▼
+                    ╔════════════════════════════════════╗
+                    ║        DATA EXTRACTION PHASE       ║
+                    ║           (extract_for_state)      ║
+                    ║                                    ║
+                    ║ - Filter only USER messages        ║
+                    ║ - Extract NAME (DSPy + regex)      ║
+                    ║ - Extract PHONE                    ║
+                    ║ - Extract VEHICLE                  ║
+                    ║ - Extract DATE                     ║
+                    ║                                    ║
+                    ║ Validations:                       ║
+                    ║ - Strip quotes from DSPy output    ║
+                    ║ - Reject if name == vehicle brand  ║
+                    ║ - Reject greeting stopwords        ║
+                    ╚════════════╤═══════════════════════╝
+                                 │
+                                 ▼
+                    ╔════════════════════════════════════╗
+                    ║    RETROACTIVE DATA COMPLETION     ║
+                    ║     (final_validation_sweep)       ║
+                    ║                                    ║
+                    ║ 1. Check missing fields            ║
+                    ║ 2. Scan history for missing data   ║
+                    ║ 3. Fill gaps retroactively         ║
+                    ║ 4. Merge with current extraction   ║
+                    ║                                    ║
+                    ║ Data Requirements by State:        ║
+                    ║ - GREETING: none                   ║
+                    ║ - NAME_COLLECTION: first_name      ║
+                    ║ - VEHICLE_DETAILS: name + vehicle  ║
+                    ║ - CONFIRMATION: all fields + date  ║
+                    ╚════════════╤═══════════════════════╝
+                                 │
+                    ┌────────────┬───────────┬──────────────┐
+                    │            │           │              │
+                    ▼            ▼           ▼              ▼
+            ╔──────────────╗ ╔──────────────╗ ╔─────────────────╗
+            ║ LLM Response ║ ║ Composition  ║ ║ Typo Detection   ║
+            ║ (if needed)  ║ ║  Engine      ║ ║ (CONFIRMATION)   ║
+            ╚───────┬──────╝ ╚─────┬────────╝ ╚────────┬─────────╝
+                    │              │                   │
+                    └───────┬──────┴──────┬────────────┘
+                            │             │
+                            ▼             ▼
+                    ╔──────────────────────────╗
+                    ║     RESPONSE BUILDER     ║
+                    ║                          ║
+                    ║ 1. Add LLM output        ║
+                    ║ 2. Add Template output   ║
+                    ║ 3. Add separator         ║
+                    ║ 4. Combine all parts     ║
+                    ║ 5. Fallback if empty     ║
+                    ╚──────────┬───────────────╝
+                               │
+                               ▼
+                    ╔──────────────────────────╗
+                    ║      STATE TRANSITION    ║
+                    ║   (determine_next_state) ║
+                    ║                          ║
+                    ║ Rule 1: Anger > 6.0 → SERVICE_SELECT          
+                    ║ Rule 2: If CONFIRMATION & confirm words       
+                    ║          → COMPLETED                        
+                    ║ Rule 3-7: Data extraction drives state         
+                    ║ Rule 8: Inquiry at GREETING → SERVICE_SELECT  
+                    ╚──────────┬───────────────╝
+                               │
+                               ▼
+                    ╔──────────────────────────╗
+                    ║   CONFIRMATION DECISION  ║
+                    ║ should_confirm = (       ║
+                    ║   next_state ==          ║
+                    ║   CONFIRMATION AND       ║
+                    ║   all_required_fields    ║
+                    ║ )                        ║
+                    ╚──────────┬───────────────╝
+                               │
+                               ▼
+                    ╔───────────────────────────────────╗
+                    ║      VALIDATED FINAL RESPONSE     ║
+                    ║                                   ║
+                    ║ • message (final text)            ║
+                    ║ • state                           ║
+                    ║ • should_confirm                  ║
+                    ║ • extracted_data                  ║
+                    ║ • sentiment                       ║
+                    ║ • scratchpad_completeness         ║
+                    ║ • typo_corrections                ║
+                    ╚─────────────┬─────────────────────╝
+                                  │
+                                  ▼
+                            ╔════════════════╗
+                            ║ FRONTEND / UI  ║
+                            ║                ║
+                            ║ Show message   ║
+                            ║ Update state   ║
+                            ║ If confirm:    ║
+                            ║  show summary  ║
+                            ╚════════════════╝
+
+=================================================================================
+BOOKING COMPLETION FLOW (SEPARATE ENDPOINT)
+=================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                   /api/confirmation ENDPOINT FLOW                           │
+│                      (Separate from /chat)                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                      ╔════════════════════════╗
+                      ║   USER CONFIRMATION    ║
+                      ║   (button / text)      ║
+                      ╚════════════╤═══════════╝
+                                   │
+                    ╔──────────────┴───────────────┐
+                    │                              │
+                    ▼                              ▼
+        ╔───────────────────────────╗   ╔────────────────────────────╗
+        │BookingOrchestrationBridge │   │ BookingFlowManager         │
+        │ .initialize_booking()     │   │ - ScratchpadManager        │
+        │                           │   │ - BookingStateMachine      │
+        │Creates BookingFlowManager │   │ - ConfirmationHandler      │
+        ╚───────────┬───────────────╝   ╚────────────┬───────────────╝
+                    │                                │
+                    └──────────────────┬─────────────┘
+                                       │
+                                       ▼
+                        ╔────────────────────────╗
+                        ║ process_booking_turn() ║
+                        ║                        ║
+                        ║ 1. Add data            ║
+                        ║ 2. Check confirmation  ║
+                        ║ 3. Show summary        ║
+                        ║ 4. Handle actions      ║
+                        ╚────────────┬───────────╝
+                                     │
+                    ┌────────────────┼────────────────┐
+                    │                │                │
+                    ▼                ▼                ▼
+            ╔──────────────╗  ╔──────────────╗  ╔──────────────╗
+            ║ CONFIRM      ║  ║ EDIT         ║  ║ CANCEL       ║
+            ╚──────┬───────╝  ╚──────┬───────╝  ╚───────┬──────╝
+                   │                 │                 │
+                   ▼                 ▼                 ▼
+        ╔────────────────────╦─────────────────╦────────────────────╗
+        │ ServiceRequest     │ Update          │ Clear              │
+        │ Builder.build()    │ scratchpad      │ scratchpad         │
+        │ Booking→COMPLETION │ Re-show form    │ Cancel booking     │
+        ╚──────────┬─────────╩─────────┬───────╩──────────┬─────────╝
+                   │                    │                 │
+                   ▼                    ▼                 ▼
+        ╔──────────────────╗  ╔──────────────╗  ╔──────────────╗
+        │Return SR + final │  │Return updated│  │Return cancel │
+        │confirmation       │  │form summary │  │message       │
+        ╚─────────┬────────╝  ╚──────┬───────┘  ╚─────────┬────┘
+                  │                 │                    │
+                  └──────────┬──────┴──────────┬─────────┘
+                             │                 │
+                             ▼                 ▼
+                  ╔────────────────────────────╗
+                  ║   CRITICAL GAP:            ║
+                  ║   ConversationManager      ║
+                  ║   state NOT updated        ║
+                  ║   → chat remains stuck     ║
+                  ║     at CONFIRMATION        ║
+                  ╚────────────────────────────╝
+
+=================================================================================
+STATE MACHINE: 11 STATES & TRANSITIONS
+=================================================================================
+
+Legend:
+→ progression by data  
+↓ service inquiry or confirmation  
+⬅ loopback (edit)
+⚠ anger override
+
+                    ┌─────────────────┐
+                    │    GREETING     │
+                    │    (State 1)    │
+                    └────────┬────────┘
+                             │
+                 ┌───────────┼─────────────┬─────────────┐
+                 │ Name →    │ Service ↓   │  ⚠ Anger>6  │
+                 ▼           ▼             ▼
+            ┌────────────────────┐
+            │ NAME_COLLECTION    │
+            │     (State 2)      │
+            └─────────┬──────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │ VEHICLE_DETAILS    │
+            │     (State 6)      │
+            └─────────┬──────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │ DATE_SELECTION     │
+            │     (State 7)      │
+            └─────────┬──────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │ SLOT_SELECTION     │
+            │     (State 8)      │
+            └─────────┬──────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │ ADDRESS_COLLECTION │
+            │     (State 9)      │
+            └─────────┬──────────┘
+                      │
+                      ▼
+            ┌────────────────────┐
+            │ CONFIRMATION       │◄─── Edit/change
+            │    (State 10)      │
+            └─────────┬──────────┘
+                      │ Confirm yes/ok
+                      ▼
+            ┌────────────────────┐
+            │   COMPLETED        │
+            │    (State 11)      │
+            │ ServiceRequest OK  │
+            └────────────────────┘
+
+=================================================================================
+DATA EXTRACTION ORDER & SAFETY
+=================================================================================
+
+1. NAME
+2. PHONE
+3. VEHICLE
+4. DATE
+
+Validation:
+✓ strip quotes  
+✓ reject vehicle brands as names  
+✓ reject greeting stopwords  
+✓ ignore none/n/a  
+
+Retroactive:
+✓ limited to last 3 messages  
+✓ only fills missing fields  
+✓ avoids redundant LLM calls  
+
+=================================================================================

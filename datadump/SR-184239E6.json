@@ -1,0 +1,36 @@
+{
+  "service_request_id": "SR-184239E6",
+  "conversation_id": "phase2_indecisive_20251130_145725",
+  "status": "confirmed",
+  "created_at": "2025-11-30T15:00:15.454029",
+  "customer": {
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "phone": "9988776655"
+  },
+  "vehicle": {
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "plate": "9988776655",
+    "phone": "9988776655",
+    "brand": "Toyota",
+    "model": "Innova"
+  },
+  "appointment": {
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Innova",
+    "vehicle_plate": "DL04C5678",
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "phone": "9988776655",
+    "date": "2025-12-03"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

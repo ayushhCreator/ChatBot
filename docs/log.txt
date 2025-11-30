@@ -1,0 +1,1996 @@
+
+🎬 Conversation Simulator Starting...
+
+✅ API is running. Starting simulations...
+
+
+################################################################################
+🚀 RUNNING 4 CONVERSATION SIMULATIONS
+################################################################################
+
+================================================================================
+🎭 CONVERSATION #1
+================================================================================
+
+👤 Customer [🤨 skeptical]: Hello
+🤖 Chatbot: Hello! I notice you might be feeling a bit frustrated or bored. How can I assist you today? 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 1) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: greeting                  🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 20.640s (Avg: 20.640s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Looking for car cleaning
+🤖 Chatbot: Hello! I see you're looking for car cleaning services. Is there something specific you need help with, or how can I assist you today? I'm here to ensure your vehicle gets the care it deserves!
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 2) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: greeting                  🎭 Mood: happy           😊
+│ ⏱️  Latency: 13.296s (Avg: 16.968s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=8.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤔 interested]: I'm Rahul
+🤖 Chatbot: Hello Rahul! It's great to meet you. I noticed you might be feeling a bit mixed about things—maybe I can help clarify or assist with whatever you're looking for? Let me know how I can support you! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 3) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: name_collection           🎭 Mood: interested      😐
+│ ⏱️  Latency: 20.079s (Avg: 18.005s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: What do you charge?
+🤖 Chatbot: I understand you're considering your options—thank you for sharing your interest! To ensure clarity, our pricing varies by service, but I’d be happy to provide detailed information or help you compare options that fit your needs and budget. How can I assist you further?
+
+┌─ 🤖 CHATBOT THINKING (Turn 4) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: angry           😐
+│ ⏱️  Latency: 15.690s (Avg: 17.426s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: That's expensive!
+🤖 Chatbot: I understand why you might feel that way—I'm sorry if the cost was unexpected. Are you looking for a specific service, or would you like help finding an alternative that better fits your budget? I'm here to assist!
+
+┌─ 🤖 CHATBOT THINKING (Turn 5) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: neutral         😠
+│ ⏱️  Latency: 12.891s (Avg: 16.519s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=8.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Can you match their price?
+🤖 Chatbot: 💰 *Complete Pricing Guide*
+
+[View All Prices](https://yawlit.com/pricing)
+[Service Comparison](https://yawlit.com/compare)
+
+*Quick Pricing:*
+• Basic Wash: ₹299-599
+• Standard Polish: ₹799-1299
+• Premium Detail: ₹1999-3499
+
+Vehicle type affects pricing. Select your vehicle for accurate quote.
+
+┌─ 🤖 CHATBOT THINKING (Turn 6) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: bored           😊
+│ ⏱️  Latency: 8.071s (Avg: 15.111s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=8.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: Tell me options
+🤖 Chatbot: Sure! Here are the available tiers for you to choose from:  
+1. **Basic Tier** - Ideal for light usage with essential features.  
+2. **Pro Tier** - Perfect for moderate usage with advanced tools.  
+3. **Premium Tier** - Designed for heavy usage with exclusive benefits.  
+
+Which tier would you like to proceed with? 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 7) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 15.192s (Avg: 15.123s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: I want the basic wash
+🤖 Chatbot: Great choice! The basic wash is a perfect option for a simple, efficient solution. Let me know if you need anything else—happy to help! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 8) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: bored           😐
+│ ⏱️  Latency: 10.809s (Avg: 14.584s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=3.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: Hyundai Creta
+🤖 Chatbot: I see you're interested in the Hyundai Creta! 🚗 Could you share more about what specifically draws you to this model? I'd love to help clarify any questions or address concerns you might have. Your feedback helps me provide better support!
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 9) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: vehicle_details           🎭 Mood: neutral         😊
+│ ⏱️  Latency: 15.106s (Avg: 14.642s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=7.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: Plate number MH12AB1234
+   ❌ Error: {"detail":"Invalid state: 1 validation error for ExtractionMetadata\nextraction_method\n  Input should be 'direct', 'chain_of_thought', 'fallback' or 'rule_based' [type=literal_error, input_value='regex', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error"}
+
+👤 Customer [🤨 skeptical]: Can you do it tomorrow?
+🤖 Chatbot: Absolutely! Tomorrow sounds great. Just to confirm, is there a specific time you had in mind, or would you prefer to keep it flexible? I'm happy to adjust as needed!
+
+┌─ 🤖 CHATBOT THINKING (Turn 11) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 18.614s (Avg: 15.039s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=6.0        Anger=2.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Next Monday
+🤖 Chatbot: Next Monday sounds like a solid choice! I completely understand if you're feeling any mixed emotions about the date—sometimes planning can feel overwhelming. Is there anything specific about the date that’s causing concern, or would you like to tweak it further? I’m here to help! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 12) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 94.977s (Avg: 22.306s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Let me think
+🤖 Chatbot: Take your time to consider your options! I'm here if you'd like to discuss any services or need help making a decision. Feel free to reach out whenever you're ready to explore further. 😊
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 13) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 12.345s (Avg: 21.476s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Can't we just book?
+   ❌ Error: {"detail":"Invalid state: 1 validation error for ValidatedChatbotResponse\nmessage\n  String should have at least 1 character [type=string_too_short, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/string_too_short"}
+
+👤 Customer [😐 neutral]: This is annoying
+🤖 Chatbot: I'm sorry you're feeling that way—I completely understand how frustrating this can be. Let me help you find the right service to address your needs. Could you share more details about what you're looking for?
+
+┌─ 🤖 CHATBOT THINKING (Turn 15) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: neutral         😠
+│ ⏱️  Latency: 12.266s (Avg: 20.767s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=8.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: This is too much hassle
+🤖 Chatbot: I'm really sorry you're feeling this way—selecting a date can feel overwhelming, and I completely understand why this might feel like a hassle. Let me simplify this for you: would you like to pick a specific date, or would you prefer me to suggest a few options that work best for your schedule? I'm here to make this as easy as possible.
+
+┌─ 🤖 CHATBOT THINKING (Turn 16) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: neutral         😠
+│ ⏱️  Latency: 21.599s (Avg: 20.827s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=9.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Fine, continue
+🤖 Chatbot: I understand—let’s move forward! How can I assist you today? Whether you’re looking for help with something specific or just need guidance, I’m here to support you. Let me know which service you’d like to explore! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 17) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 11.506s (Avg: 20.205s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Why should I choose you?
+🤖 Chatbot: Thank you for considering me! I understand that choosing the right tier can feel overwhelming. My strength lies in adapting to your needs while maintaining precision and patience—whether you're tackling complex tasks or need straightforward support, I'm here to ensure your experience is smooth and effective. Let me know how I can assist you best!
+
+┌─ 🤖 CHATBOT THINKING (Turn 18) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: happy           😊
+│ ⏱️  Latency: 15.884s (Avg: 19.935s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=8.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: Not bad
+🤖 Chatbot: We're glad you found it acceptable! 😊 If you're open to it, I'd love to help you explore the options further and find the best fit for your needs. What tier are you leaning toward?
+
+┌─ 🤖 CHATBOT THINKING (Turn 19) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 21.506s (Avg: 20.028s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=6.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: Can I get a discount?
+🤖 Chatbot: I understand you're looking for a discount – thank you for sharing that! I want to make sure we find the best option for you. Could you clarify if you're referring to a specific service or product? I’d be happy to check available promotions or explain how discounts work to ensure we meet your needs.
+
+┌─ 🤖 CHATBOT THINKING (Turn 20) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: neutral         😊
+│ ⏱️  Latency: 13.063s (Avg: 19.641s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=7.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: Alright, let's book
+   ❌ Error: {"detail":"Invalid state: 1 validation error for ValidatedChatbotResponse\nmessage\n  String should have at least 1 character [type=string_too_short, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/string_too_short"}
+
+👤 Customer [😊 happy]: Before we confirm
+🤖 Chatbot: I completely understand—you're probably feeling a bit overwhelmed with all the details! 😊 Let me know if you'd prefer to take a break, review specific details, or switch topics entirely. Your comfort is key—when are you ready to proceed?
+
+┌─ 🤖 CHATBOT THINKING (Turn 22) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: happy           😐
+│ ⏱️  Latency: 12.162s (Avg: 19.247s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=3.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Payment options?
+🤖 Chatbot: Thank you for your interest! I completely understand that payment options can be a key consideration. We offer several flexible payment methods, including credit/debit cards, PayPal, and bank transfers. If you have any specific preferences or questions about fees, please let me know—I’m here to help ensure everything meets your needs! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 23) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 12.677s (Avg: 18.919s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Yes, finalize
+🤖 Chatbot: Great, I'm glad to hear that! Let me finalize this for you. If you have any further questions or need adjustments, feel free to ask. 😊
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 24) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 10.657s (Avg: 18.525s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=3.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: See you then
+🤖 Chatbot: Have a great day! Don't hesitate to reach out if you need anything else. Safe travels! 🌟
+
+┌─ 🤖 CHATBOT THINKING (Turn 25) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: completed                 🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 11.132s (Avg: 18.189s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+================================================================================
+📊 CONVERSATION SUMMARY
+================================================================================
+  Turns: 22   |  Total Time: 400.16s  |  Avg: 18.189s
+  Min: 8.071s  |  Max: 94.977s
+  Extractions: 0  |  Sentiment Checks: 22
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+
+================================================================================
+🎭 CONVERSATION #2
+================================================================================
+
+👤 Customer [😤 frustrated]: Good morning
+🤖 Chatbot: Good morning! 😊 It's a great day to tackle whatever you're here for. How can I assist you today?
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 1) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: greeting                  🎭 Mood: frustrated      😊
+│ ⏱️  Latency: 11.949s (Avg: 11.949s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=8.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: My car is dirty
+🤖 Chatbot: I understand that a dirty car can be really frustrating! Would you like help with cleaning or detailing your vehicle? I'm here to assist with whatever you need.
+
+┌─ 🤖 CHATBOT THINKING (Turn 2) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: greeting                  🎭 Mood: angry           😐
+│ ⏱️  Latency: 13.827s (Avg: 12.888s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: I'm Sneha Patel
+🤖 Chatbot: Thank you for sharing your name, Sneha Patel. I appreciate your input. I notice you might be feeling a mix of emotions—perhaps there’s something on your mind? Please know I’m here to help and can adjust my approach to better support you. How can I assist you today?
+
+┌─ 🤖 CHATBOT THINKING (Turn 3) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: name_collection           🎭 Mood: angry           😐
+│ ⏱️  Latency: 19.783s (Avg: 15.186s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: How much?
+🤖 Chatbot: *{service_name} Plans:*
+
+🥉 *Basic* - ₹{basic_price}
+   Perfect for regular maintenance
+
+🥈 *Standard* - ₹{standard_price}
+   Most popular option
+
+🥇 *Premium* - ₹{premium_price}
+   Complete luxury treatment
+
+[Book {service_name}](https://yawlit.com/book/{service_type})
+
+┌─ 🤖 CHATBOT THINKING (Turn 4) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: angry           😐
+│ ⏱️  Latency: 5.503s (Avg: 12.765s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=2.0   Boredom=3.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: That's too much
+🤖 Chatbot: I'm really sorry you felt that way – I completely understand why this might feel overwhelming. Let me simplify this for you. Would you prefer to explore fewer options at a time, or is there a specific type of service you'd like to focus on first? I'm here to make this as smooth as possible for you.
+
+┌─ 🤖 CHATBOT THINKING (Turn 5) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: bored           😠
+│ ⏱️  Latency: 15.751s (Avg: 13.363s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=9.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤔 interested]: This is overpriced
+🤖 Chatbot: 💰 *Complete Pricing Guide*
+
+[View All Prices](https://yawlit.com/pricing)
+[Service Comparison](https://yawlit.com/compare)
+
+*Quick Pricing:*
+• Basic Wash: ₹299-599
+• Standard Polish: ₹799-1299
+• Premium Detail: ₹1999-3499
+
+Vehicle type affects pricing. Select your vehicle for accurate quote.
+
+┌─ 🤖 CHATBOT THINKING (Turn 6) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: interested      😠
+│ ⏱️  Latency: 6.420s (Avg: 12.205s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=8.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Tell me options
+🤖 Chatbot: Sure! Here are the available tiers for you to choose from:  
+1. **Basic Tier** - Ideal for light usage with essential features.  
+2. **Pro Tier** - Perfect for moderate usage with advanced tools.  
+3. **Premium Tier** - Designed for heavy usage with exclusive benefits.  
+
+Which tier would you like to proceed with? 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 7) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: bored           😐
+│ ⏱️  Latency: 0.020s (Avg: 10.465s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: I want the basic wash
+🤖 Chatbot: Great choice! The basic wash is a perfect option for a simple, efficient solution. Let me know if you need anything else—happy to help! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 8) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 0.019s (Avg: 9.159s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=3.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Hyundai Creta
+🤖 Chatbot: I see you're interested in the Hyundai Creta! 🚗 Could you share more about what specifically draws you to this model? I'd love to help clarify any questions or address concerns you might have. Your feedback helps me provide better support!
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 9) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: vehicle_details           🎭 Mood: frustrated      😊
+│ ⏱️  Latency: 0.028s (Avg: 8.144s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=7.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Number is DL04C5678
+   ❌ Error: {"detail":"Invalid state: 1 validation error for ExtractionMetadata\nextraction_method\n  Input should be 'direct', 'chain_of_thought', 'fallback' or 'rule_based' [type=literal_error, input_value='regex', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error"}
+
+👤 Customer [😤 frustrated]: When are you available?
+🤖 Chatbot: I'm here to help! Could you share your preferred dates or times for scheduling? I'm happy to accommodate your availability while addressing any concerns you might have.
+
+┌─ 🤖 CHATBOT THINKING (Turn 11) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 26.513s (Avg: 9.981s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: Day after tomorrow
+🤖 Chatbot: Got it — the day after tomorrow is set! 🎉 Just to make sure, is this date working for you, or would you prefer to tweak it? I'm here to help adjust anything to better suit your needs.
+
+┌─ 🤖 CHATBOT THINKING (Turn 12) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: angry           😐
+│ ⏱️  Latency: 19.726s (Avg: 10.867s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Let me think
+🤖 Chatbot: Take your time to consider your options! I'm here if you'd like to discuss any services or need help making a decision. Feel free to reach out whenever you're ready to explore further. 😊
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 13) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: happy           😐
+│ ⏱️  Latency: 0.025s (Avg: 9.964s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: This is taking too long
+🤖 Chatbot: I apologize for the delay and appreciate your patience. Let me expedite this process for you—could we quickly review your tier preferences so I can assist further? Your satisfaction is important, and I’m here to make this as smooth as possible.
+
+┌─ 🤖 CHATBOT THINKING (Turn 14) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: skeptical       😠
+│ ⏱️  Latency: 10.715s (Avg: 10.021s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=7.0   Boredom=3.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: I'm getting frustrated
+🤖 Chatbot: I'm sorry you're feeling that way – I want to help resolve this. Could you share more about what's causing the frustration? Are you having trouble finding the right service, or is there something specific about the options that's not working for you? I'm here to assist in any way I can.
+
+┌─ 🤖 CHATBOT THINKING (Turn 15) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: frustrated      😠
+│ ⏱️  Latency: 12.884s (Avg: 10.226s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=9.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: This is too much hassle
+🤖 Chatbot: I'm really sorry you're feeling this way—selecting a date can feel overwhelming, and I completely understand why this might feel like a hassle. Let me simplify this for you: would you like to pick a specific date, or would you prefer me to suggest a few options that work best for your schedule? I'm here to make this as easy as possible.
+
+┌─ 🤖 CHATBOT THINKING (Turn 16) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: angry           😠
+│ ⏱️  Latency: 0.029s (Avg: 9.546s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=9.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: Let's proceed
+🤖 Chatbot: Great, let's move forward! How would you like to proceed? I'm here to help and ensure things go smoothly for you. If there's anything specific you'd like to address first, feel free to share! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 17) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: neutral         😐
+│ ⏱️  Latency: 14.288s (Avg: 9.842s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: Any guarantees?
+🤖 Chatbot: "Absolutely, we offer a 30-day money-back guarantee on all tiers! If you're not satisfied, you can request a full refund without any questions asked. Our team is also here to help you choose the best fit for your needs—let me know if you'd like to explore options further!"
+
+┌─ 🤖 CHATBOT THINKING (Turn 18) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 13.289s (Avg: 10.045s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=3.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Not bad
+🤖 Chatbot: We're glad you found it acceptable! 😊 If you're open to it, I'd love to help you explore the options further and find the best fit for your needs. What tier are you leaning toward?
+
+┌─ 🤖 CHATBOT THINKING (Turn 19) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: happy           😐
+│ ⏱️  Latency: 0.022s (Avg: 9.488s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=6.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: First time customer discount?
+🤖 Chatbot: Thank you for your interest! As a first-time customer, you’re eligible for a special discount—let me know your details, and I’ll ensure you receive it. If there’s anything else on your mind, I’m here to help! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 20) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: bored           😊
+│ ⏱️  Latency: 19.143s (Avg: 9.996s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=10.0       Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Okay I'm convinced
+🤖 Chatbot: Great to hear you're convinced! 🎉 Your enthusiasm is contagious—sounds like you're all set. If you need any final tweaks or have more questions, just give me a shout. Let's make sure this works perfectly for you!
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 21) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: happy           😊
+│ ⏱️  Latency: 15.418s (Avg: 10.268s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=9.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: Wait, one more thing
+🤖 Chatbot: Of course, I'm here to help! Could you share what's on your mind? I'd love to clarify anything and ensure everything meets your expectations. Your input is valuable in making this process smooth for you.
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 22) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 11.160s (Avg: 10.310s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: What's your cancellation policy?
+🤖 Chatbot: Thank you for asking! Our cancellation policy allows free cancellations up to 48 hours before the scheduled service time. If you need to cancel, just let us know, and we’ll process it immediately. No stress—your peace of mind is important to us! 😊 Is there anything else I can clarify for you?
+
+┌─ 🤖 CHATBOT THINKING (Turn 23) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: skeptical       😊
+│ ⏱️  Latency: 18.174s (Avg: 10.668s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=9.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Okay confirmed
+🤖 Chatbot: Great! I'm here to help if you need anything else. How can I assist you further today? 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 24) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: bored           😐
+│ ⏱️  Latency: 12.777s (Avg: 10.759s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: See you then
+🤖 Chatbot: Have a great day! Don't hesitate to reach out if you need anything else. Safe travels! 🌟
+
+┌─ 🤖 CHATBOT THINKING (Turn 25) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: completed                 🎭 Mood: bored           😐
+│ ⏱️  Latency: 0.022s (Avg: 10.312s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+================================================================================
+📊 CONVERSATION SUMMARY
+================================================================================
+  Turns: 24   |  Total Time: 247.48s  |  Avg: 10.312s
+  Min: 0.019s  |  Max: 26.513s
+  Extractions: 0  |  Sentiment Checks: 24
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+
+================================================================================
+🎭 CONVERSATION #3
+================================================================================
+
+👤 Customer [😠 angry]: Hello
+🤖 Chatbot: Hello! I notice you might be feeling a bit frustrated or bored. How can I assist you today? 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 1) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: greeting                  🎭 Mood: angry           😐
+│ ⏱️  Latency: 0.019s (Avg: 0.019s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Looking for car cleaning
+🤖 Chatbot: Hello! I see you're looking for car cleaning services. Is there something specific you need help with, or how can I assist you today? I'm here to ensure your vehicle gets the care it deserves!
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 2) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: greeting                  🎭 Mood: frustrated      😊
+│ ⏱️  Latency: 0.019s (Avg: 0.019s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=8.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Amit here
+🤖 Chatbot: I noticed you might be feeling a bit frustrated, but I'm here to help! Could you share your name so we can get started? Your input is valuable, and I'm here to assist with whatever you need.
+
+┌─ 🤖 CHATBOT THINKING (Turn 3) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: name_collection           🎭 Mood: happy           😐
+│ ⏱️  Latency: 24.664s (Avg: 8.234s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: How much?
+🤖 Chatbot: *{service_name} Plans:*
+
+🥉 *Basic* - ₹{basic_price}
+   Perfect for regular maintenance
+
+🥈 *Standard* - ₹{standard_price}
+   Most popular option
+
+🥇 *Premium* - ₹{premium_price}
+   Complete luxury treatment
+
+[Book {service_name}](https://yawlit.com/book/{service_type})
+
+┌─ 🤖 CHATBOT THINKING (Turn 4) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: happy           😐
+│ ⏱️  Latency: 0.010s (Avg: 6.178s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=2.0   Boredom=3.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: Too costly
+🤖 Chatbot: *{service_name} Plans:*
+
+🥉 *Basic* - ₹{basic_price}
+   Perfect for regular maintenance
+
+🥈 *Standard* - ₹{standard_price}
+   Most popular option
+
+🥇 *Premium* - ₹{premium_price}
+   Complete luxury treatment
+
+[Book {service_name}](https://yawlit.com/book/{service_type})
+
+┌─ 🤖 CHATBOT THINKING (Turn 5) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: skeptical       😠
+│ ⏱️  Latency: 7.488s (Avg: 6.440s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=9.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: Can you match their price?
+🤖 Chatbot: 💰 *Complete Pricing Guide*
+
+[View All Prices](https://yawlit.com/pricing)
+[Service Comparison](https://yawlit.com/compare)
+
+*Quick Pricing:*
+• Basic Wash: ₹299-599
+• Standard Polish: ₹799-1299
+• Premium Detail: ₹1999-3499
+
+Vehicle type affects pricing. Select your vehicle for accurate quote.
+
+┌─ 🤖 CHATBOT THINKING (Turn 6) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: skeptical       😊
+│ ⏱️  Latency: 0.011s (Avg: 5.369s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=8.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: What do you offer?
+🤖 Chatbot: 📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 7) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: neutral         😊
+│ ⏱️  Latency: 8.744s (Avg: 5.851s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=8.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Full service
+🤖 Chatbot: Thank you for choosing Full Service! I’ll provide you with a detailed overview to ensure all your questions are covered. Let me know if you’d like to dive deeper into any specific aspect. 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 8) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: bored           😐
+│ ⏱️  Latency: 11.971s (Avg: 6.616s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: Hyundai Creta
+🤖 Chatbot: I see you're interested in the Hyundai Creta! 🚗 Could you share more about what specifically draws you to this model? I'd love to help clarify any questions or address concerns you might have. Your feedback helps me provide better support!
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 9) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: vehicle_details           🎭 Mood: neutral         😊
+│ ⏱️  Latency: 0.027s (Avg: 5.884s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=7.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Number is DL04C5678
+   ❌ Error: {"detail":"Invalid state: 1 validation error for ExtractionMetadata\nextraction_method\n  Input should be 'direct', 'chain_of_thought', 'fallback' or 'rule_based' [type=literal_error, input_value='regex', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error"}
+
+👤 Customer [🤨 skeptical]: What slots do you have?
+🤖 Chatbot: I see you're interested in selecting a date! Let me know which of these slots works best for you:  
+- 10:00 AM  
+- 1:00 PM  
+- 4:00 PM  
+- 7:00 PM  
+Just let me know your preference, and I’ll finalize it for you! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 11) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: skeptical       😊
+│ ⏱️  Latency: 24.798s (Avg: 7.775s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=7.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Tomorrow works
+🤖 Chatbot: Great! Tomorrow sounds perfect. Let me just double-check the date—does July 5th work for you? I’m excited to move forward with your plans!
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 12) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: bored           😐
+│ ⏱️  Latency: 20.941s (Avg: 8.972s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Too many questions
+🤖 Chatbot: I'm sorry if you felt overwhelmed—let me make this easier! Are you looking for a specific service, or would you like help narrowing down options? I’m here to guide you through without the hassle.
+
+┌─ 🤖 CHATBOT THINKING (Turn 13) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: happy           😠
+│ ⏱️  Latency: 13.533s (Avg: 9.352s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=7.0   Boredom=6.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Can't we just book?
+   ❌ Error: {"detail":"Invalid state: 1 validation error for ValidatedChatbotResponse\nmessage\n  String should have at least 1 character [type=string_too_short, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/string_too_short"}
+
+👤 Customer [😊 happy]: I'm getting frustrated
+🤖 Chatbot: I'm sorry you're feeling that way – I want to help resolve this. Could you share more about what's causing the frustration? Are you having trouble finding the right service, or is there something specific about the options that's not working for you? I'm here to assist in any way I can.
+
+┌─ 🤖 CHATBOT THINKING (Turn 15) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: happy           😠
+│ ⏱️  Latency: 0.019s (Avg: 8.634s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=9.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: Maybe I should go elsewhere
+🤖 Chatbot: I understand that the options might feel repetitive or unexciting—boredom can make even the best plans feel stale! Maybe we can explore something new or adjust the date to better suit your interests? Let me know what direction you'd like to take, and I’ll help make it more enjoyable. 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 16) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: angry           😐
+│ ⏱️  Latency: 19.822s (Avg: 9.433s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=3.0   Boredom=4.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Fine, continue
+🤖 Chatbot: I understand—let’s move forward! How can I assist you today? Whether you’re looking for help with something specific or just need guidance, I’m here to support you. Let me know which service you’d like to explore! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 17) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: happy           😐
+│ ⏱️  Latency: 0.021s (Avg: 8.806s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: Any guarantees?
+🤖 Chatbot: "Absolutely, we offer a 30-day money-back guarantee on all tiers! If you're not satisfied, you can request a full refund without any questions asked. Our team is also here to help you choose the best fit for your needs—let me know if you'd like to explore options further!"
+
+┌─ 🤖 CHATBOT THINKING (Turn 18) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: angry           😐
+│ ⏱️  Latency: 0.020s (Avg: 8.257s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=3.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤔 interested]: Not bad
+🤖 Chatbot: We're glad you found it acceptable! 😊 If you're open to it, I'd love to help you explore the options further and find the best fit for your needs. What tier are you leaning toward?
+
+┌─ 🤖 CHATBOT THINKING (Turn 19) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: interested      😐
+│ ⏱️  Latency: 0.019s (Avg: 7.772s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=6.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Loyalty program?
+🤖 Chatbot: I'm glad you're interested in our loyalty program! It's designed to reward customers like you with exclusive perks and surprises. Would you like me to share more details about how it works or answer any questions you have? Your feedback helps us tailor the experience to your preferences!
+
+┌─ 🤖 CHATBOT THINKING (Turn 20) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: frustrated      😊
+│ ⏱️  Latency: 26.929s (Avg: 8.836s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=8.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Okay I'm convinced
+🤖 Chatbot: Great to hear you're convinced! 🎉 Your enthusiasm is contagious—sounds like you're all set. If you need any final tweaks or have more questions, just give me a shout. Let's make sure this works perfectly for you!
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 21) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: happy           😊
+│ ⏱️  Latency: 0.024s (Avg: 8.373s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=9.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Wait, one more thing
+🤖 Chatbot: Of course, I'm here to help! Could you share what's on your mind? I'd love to clarify anything and ensure everything meets your expectations. Your input is valuable in making this process smooth for you.
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 22) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 0.022s (Avg: 7.955s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Payment options?
+🤖 Chatbot: Thank you for your interest! I completely understand that payment options can be a key consideration. We offer several flexible payment methods, including credit/debit cards, PayPal, and bank transfers. If you have any specific preferences or questions about fees, please let me know—I’m here to help ensure everything meets your needs! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 23) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 0.022s (Avg: 7.577s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Book it
+   ❌ Error: {"detail":"Invalid state: 1 validation error for ValidatedChatbotResponse\nmessage\n  String should have at least 1 character [type=string_too_short, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/string_too_short"}
+
+👤 Customer [🤨 skeptical]: Thanks
+🤖 Chatbot: You're welcome! I'm glad I could help. If there's anything else I can assist you with or if you need further clarification, feel free to ask. Have a great day! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 25) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: completed                 🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 22.715s (Avg: 8.265s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+================================================================================
+📊 CONVERSATION SUMMARY
+================================================================================
+  Turns: 22   |  Total Time: 181.84s  |  Avg: 8.265s
+  Min: 0.010s  |  Max: 26.929s
+  Extractions: 0  |  Sentiment Checks: 22
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+
+================================================================================
+🎭 CONVERSATION #4
+================================================================================
+
+👤 Customer [😠 angry]: Hello
+🤖 Chatbot: Hello! I notice you might be feeling a bit frustrated or bored. How can I assist you today? 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 1) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: greeting                  🎭 Mood: angry           😐
+│ ⏱️  Latency: 0.018s (Avg: 0.018s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: My car is dirty
+🤖 Chatbot: I understand that a dirty car can be really frustrating! Would you like help with cleaning or detailing your vehicle? I'm here to assist with whatever you need.
+
+┌─ 🤖 CHATBOT THINKING (Turn 2) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: greeting                  🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 0.020s (Avg: 0.019s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Amit here
+🤖 Chatbot: I noticed you might be feeling a bit frustrated, but I'm here to help! Could you share your name so we can get started? Your input is valuable, and I'm here to assist with whatever you need.
+
+┌─ 🤖 CHATBOT THINKING (Turn 3) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: name_collection           🎭 Mood: bored           😐
+│ ⏱️  Latency: 0.027s (Avg: 0.022s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: Tell me rates
+🤖 Chatbot: 💰 *Complete Pricing Guide*
+
+[View All Prices](https://yawlit.com/pricing)
+[Service Comparison](https://yawlit.com/compare)
+
+*Quick Pricing:*
+• Basic Wash: ₹299-599
+• Standard Polish: ₹799-1299
+• Premium Detail: ₹1999-3499
+
+Vehicle type affects pricing. Select your vehicle for accurate quote.
+
+┌─ 🤖 CHATBOT THINKING (Turn 4) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: neutral         😐
+│ ⏱️  Latency: 7.325s (Avg: 1.848s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Can you give discount?
+🤖 Chatbot: I understand you're looking for a great deal! While I can't offer discounts, I'd be happy to help you find the service that best fits your needs at the best value. Let me know what you're looking for, and I'll ensure we find the perfect solution together. Is there anything specific you need help with today?
+
+┌─ 🤖 CHATBOT THINKING (Turn 5) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: bored           😊
+│ ⏱️  Latency: 17.609s (Avg: 5.000s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=9.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: I saw cheaper rates elsewhere
+🤖 Chatbot: 💰 *Complete Pricing Guide*
+
+[View All Prices](https://yawlit.com/pricing)
+[Service Comparison](https://yawlit.com/compare)
+
+*Quick Pricing:*
+• Basic Wash: ₹299-599
+• Standard Polish: ₹799-1299
+• Premium Detail: ₹1999-3499
+
+Vehicle type affects pricing. Select your vehicle for accurate quote.
+
+┌─ 🤖 CHATBOT THINKING (Turn 6) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: neutral         😠
+│ ⏱️  Latency: 8.349s (Avg: 5.558s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=3.0        Anger=7.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: Tell me options
+🤖 Chatbot: Sure! Here are the available tiers for you to choose from:  
+1. **Basic Tier** - Ideal for light usage with essential features.  
+2. **Pro Tier** - Perfect for moderate usage with advanced tools.  
+3. **Premium Tier** - Designed for heavy usage with exclusive benefits.  
+
+Which tier would you like to proceed with? 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 7) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: happy           😐
+│ ⏱️  Latency: 0.019s (Avg: 4.767s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=5.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤨 skeptical]: I want the basic wash
+🤖 Chatbot: Great choice! The basic wash is a perfect option for a simple, efficient solution. Let me know if you need anything else—happy to help! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 8) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: skeptical       😐
+│ ⏱️  Latency: 0.019s (Avg: 4.173s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=3.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: Tata Nexon
+🤖 Chatbot: I see you're looking at the Tata Nexon – it's a popular choice for its balance of performance and features! 🚗 While I understand if you've encountered any concerns (like pricing or features), I'd love to hear what specifically interests you about the Nexon or if there's something you'd like to explore further? Your insights will help me guide you better!
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 9) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: vehicle_details           🎭 Mood: angry           😊
+│ ⏱️  Latency: 25.084s (Avg: 6.497s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=9.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [🤔 interested]: Plate number MH12AB1234
+   ❌ Error: {"detail":"Invalid state: 1 validation error for ExtractionMetadata\nextraction_method\n  Input should be 'direct', 'chain_of_thought', 'fallback' or 'rule_based' [type=literal_error, input_value='regex', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/literal_error"}
+
+👤 Customer [😴 bored]: When are you available?
+🤖 Chatbot: I'm here to help! Could you share your preferred dates or times for scheduling? I'm happy to accommodate your availability while addressing any concerns you might have.
+
+┌─ 🤖 CHATBOT THINKING (Turn 11) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: bored           😐
+│ ⏱️  Latency: 0.026s (Avg: 5.850s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: This Friday
+🤖 Chatbot: Great choice! This Friday sounds like a perfect date. Are there any specific times or activities you'd like to focus on? I'm here to help ensure everything goes smoothly! 😊
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 12) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: neutral         😐
+│ ⏱️  Latency: 46.218s (Avg: 9.520s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=3.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: Wait, I'm not sure
+🤖 Chatbot: I completely understand—choosing the right service can be tricky! Let me know if you'd like me to explain any options in more detail or help narrow down what might work best for you. No pressure at all! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 13) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: angry           😐
+│ ⏱️  Latency: 12.231s (Avg: 9.745s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: Why do you need all this info?
+🤖 Chatbot: I understand if you feel that way – I want to make sure we select the best tier for your needs! All the details help us ensure the service aligns perfectly with your requirements. If you'd prefer, I can walk you through the options step by step to make it easier. How does that sound?
+
+┌─ 🤖 CHATBOT THINKING (Turn 14) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: neutral         😐
+│ ⏱️  Latency: 10.933s (Avg: 9.837s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=6.0        Anger=2.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Why so complicated?
+🤖 Chatbot: I'm sorry if this feels overwhelming—there's no need to navigate this alone. Let me simplify this for you. Would you like me to walk you through a more straightforward way to select your service? Your satisfaction is important, and I want to make this as easy as possible.
+
+┌─ 🤖 CHATBOT THINKING (Turn 15) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: bored           😐
+│ ⏱️  Latency: 16.521s (Avg: 10.314s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=3.0        Anger=6.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😤 frustrated]: Your competitor is easier
+🤖 Chatbot: I'm sorry if you've encountered any frustration—selecting a date can sometimes feel overwhelming. Let me know if you'd prefer assistance with narrowing down options or if there's a specific date that works best for you. I'm here to help streamline this process!
+
+┌─ 🤖 CHATBOT THINKING (Turn 16) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: date_selection            🎭 Mood: frustrated      😐
+│ ⏱️  Latency: 19.013s (Avg: 10.894s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=1.0        Anger=3.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: Okay I'm interested
+🤖 Chatbot: Great to hear you're interested! Could you let me know which service you'd like to explore? I'm here to help once you decide! 😊
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 17) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: service_selection         🎭 Mood: angry           😊
+│ ⏱️  Latency: 13.660s (Avg: 11.067s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=10.0       Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: Any guarantees?
+🤖 Chatbot: "Absolutely, we offer a 30-day money-back guarantee on all tiers! If you're not satisfied, you can request a full refund without any questions asked. Our team is also here to help you choose the best fit for your needs—let me know if you'd like to explore options further!"
+
+┌─ 🤖 CHATBOT THINKING (Turn 18) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: angry           😐
+│ ⏱️  Latency: 0.022s (Avg: 10.417s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=3.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😠 angry]: I guess that works
+🤖 Chatbot: I understand if you're feeling a bit unsure—choosing the right tier can be tricky! If you'd like, I can walk you through the benefits of each option to help you decide. Which tier feels more exciting to you, or would you prefer some guidance? 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 19) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: tier_selection            🎭 Mood: angry           😐
+│ ⏱️  Latency: 17.679s (Avg: 10.821s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=2.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: First time customer discount?
+🤖 Chatbot: Thank you for your interest! As a first-time customer, you’re eligible for a special discount—let me know your details, and I’ll ensure you receive it. If there’s anything else on your mind, I’m here to help! 😊
+
+┌─ 🤖 CHATBOT THINKING (Turn 20) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: happy           😊
+│ ⏱️  Latency: 0.021s (Avg: 10.252s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=10.0       Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😴 bored]: Alright, let's book
+   ❌ Error: {"detail":"Invalid state: 1 validation error for ValidatedChatbotResponse\nmessage\n  String should have at least 1 character [type=string_too_short, input_value='', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/string_too_short"}
+
+👤 Customer [😊 happy]: Before we confirm
+🤖 Chatbot: I completely understand—you're probably feeling a bit overwhelmed with all the details! 😊 Let me know if you'd prefer to take a break, review specific details, or switch topics entirely. Your comfort is key—when are you ready to proceed?
+
+┌─ 🤖 CHATBOT THINKING (Turn 22) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: happy           😐
+│ ⏱️  Latency: 0.019s (Avg: 9.741s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=3.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😊 happy]: What if I'm late?
+🤖 Chatbot: I understand that unexpected delays can happen—thank you for sharing that! If you're running late, just let me know as soon as possible, and we can adjust accordingly. Your time is important, and I’m here to help ensure everything works smoothly for you.
+
+┌─ 🤖 CHATBOT THINKING (Turn 23) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: happy           😐
+│ ⏱️  Latency: 17.329s (Avg: 10.102s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=3.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: Let's go ahead
+🤖 Chatbot: Great, let's move forward! I understand if you're feeling any mixed emotions about this—change can sometimes feel overwhelming. I'm here to support you every step of the way, so please take your time and let me know if you need anything. Your comfort is important!
+
+┌─ 🤖 CHATBOT THINKING (Turn 24) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: confirmation              🎭 Mood: neutral         😐
+│ ⏱️  Latency: 14.516s (Avg: 10.303s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=2.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+👤 Customer [😐 neutral]: Great
+🤖 Chatbot: Thank you for your feedback! I'm glad you found the interaction helpful. If you have any more questions or need further assistance, feel free to ask. Have a great day! 😊
+
+————————————————————————————————————————
+📋 *Our Services:*
+
+🚗 *WASH* - Interior & Exterior
+   Professional deep clean - Basic to Premium tiers available
+
+💎 *POLISHING* - Shine & Protection
+   Restore your car's lustre
+
+🔧 *DETAILING* - Complete Care
+   Comprehensive interior & exterior treatment
+
+*Tap below to view plans:*
+[View Wash Plans](https://yawlit.com/plans/wash)
+[View Polish Plans](https://yawlit.com/plans/polish)
+[View Detail Plans](https://yawlit.com/plans/detail)
+
+┌─ 🤖 CHATBOT THINKING (Turn 25) ──────────────────────────────────────────────────────
+│
+│ 🎯 State: completed                 🎭 Mood: neutral         😊
+│ ⏱️  Latency: 17.314s (Avg: 10.608s)
+│ ✅ Proceed: True
+│
+│ 📊 SENTIMENT:  Interest=9.0        Anger=1.0   Boredom=1.0
+│ 📦 EXTRACTED: None
+│ 💡 ACTIONS: Sentiment✓  Extract✗  Normal
+│
+└────────────────────────────────────────────────────────────────────────────
+
+
+================================================================================
+📊 CONVERSATION SUMMARY
+================================================================================
+  Turns: 23   |  Total Time: 243.97s  |  Avg: 10.608s
+  Min: 0.018s  |  Max: 46.218s
+  Extractions: 0  |  Sentiment Checks: 23
+================================================================================
+
+
+################################################################################
+🎯 OVERALL SUMMARY - 4 CONVERSATIONS
+################################################################################
+
+  📈 PERFORMANCE METRICS:
+     Total Turns: 91
+     Total Time: 1073.46s
+     Avg per Turn: 11.796s
+     Range: 0.010s - 94.977s
+
+  🎯 INTELLIGENCE METRICS:
+     Data Extractions: 0
+     Sentiment Checks: 91
+     Success Rate: 0.0%
+
+################################################################################
+
+
+✅ All simulations completed!

@@ -1,0 +1,32 @@
+{
+  "service_request_id": "SR-E7156F81",
+  "conversation_id": "phase2_edit_confirmation_20251130_140554",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:08:25.881112",
+  "customer": {
+    "first_name": "Priya",
+    "last_name": "Sharma",
+    "full_name": "Priya Sharma",
+    "phone": "9123456789"
+  },
+  "vehicle": {
+    "brand": "Ford",
+    "model": "EcoSport",
+    "plate": "RJ14QR6789"
+  },
+  "appointment": {
+    "date": "2025-12-02",
+    "first_name": "Priya",
+    "last_name": "Sharma",
+    "full_name": "Priya Sharma",
+    "phone": "9123456789",
+    "vehicle_brand": "Ford",
+    "vehicle_model": "EcoSport",
+    "vehicle_plate": "RJ14QR6789"
+  },
+  "metadata": {
+    "completeness": 93.8,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

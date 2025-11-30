@@ -1,0 +1,36 @@
+{
+  "service_request_id": "SR-9740C3D0",
+  "conversation_id": "phase2_happy_path_20251130_143842",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:40:37.582561",
+  "customer": {
+    "first_name": "Rohan",
+    "last_name": "Joshi",
+    "full_name": "Rohan Joshi",
+    "phone": "8765432109"
+  },
+  "vehicle": {
+    "phone": "8765432109",
+    "first_name": "Rohan",
+    "last_name": "Joshi",
+    "full_name": "Rohan Joshi",
+    "brand": "Ford",
+    "model": "EcoSport",
+    "plate": "MH02DE3456"
+  },
+  "appointment": {
+    "vehicle_brand": "Ford",
+    "vehicle_model": "EcoSport",
+    "first_name": "Rohan",
+    "last_name": "Joshi",
+    "full_name": "Rohan Joshi",
+    "phone": "8765432109",
+    "vehicle_plate": "MH02DE3456",
+    "date": "2025-11-30"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

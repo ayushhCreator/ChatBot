@@ -1,0 +1,38 @@
+{
+  "service_request_id": "SR-BDA7972A",
+  "conversation_id": "phase2_happy_path_20251130_132607",
+  "status": "confirmed",
+  "created_at": "2025-11-30T13:28:08.900980",
+  "customer": {
+    "first_name": "Sir",
+    "full_name": "Sir None",
+    "last_name": "Iyer",
+    "phone": "8888777766"
+  },
+  "vehicle": {
+    "first_name": "Sir",
+    "full_name": "Sir None",
+    "time_slot": "early_morning",
+    "last_name": "Iyer",
+    "plate": "DL4CAF4321",
+    "phone": "8888777766",
+    "brand": "Hyundai",
+    "model": "i20"
+  },
+  "appointment": {
+    "time_slot": "early_morning",
+    "vehicle_brand": "Hyundai",
+    "vehicle_model": "i20",
+    "first_name": "Divya",
+    "last_name": "Iyer",
+    "full_name": "Divya Iyer",
+    "phone": "8888777766",
+    "vehicle_plate": "KA03HI1234",
+    "date": "2025-12-07"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

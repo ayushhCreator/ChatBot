@@ -1,0 +1,714 @@
+Page,Section,Rq_No,Function_name,Function description,Integration(If any)
+Registration Page,,,,,
+Customer Registration,Page Access Control,1.1.1,Guest Access Check,Allow only guest (non-logged-in) users to access registration page,"User doctype, Session management"
+Customer Registration,Page Access Control,1.1.2,Redirect Logged Users,"IF user is already logged in, THEN redirect to /customer/dashboard",Session validation
+Customer Registration,Registration Form Fields,1.2.1,Full Name Input,"Text field for customer's full name (required, min 2 characters)",CustomerProfile doctype
+Customer Registration,Registration Form Fields,1.2.2,Email Input,"Email field with validation (required, unique, lowercase conversion)","User doctype, CustomerProfile doctype"
+Customer Registration,Registration Form Fields,1.2.3,Password Input,"Password field with visibility toggle (required, min 6 characters)",User doctype (encrypted)
+Customer Registration,Registration Form Fields,1.2.4,Password Toggle,Button to show/hide password text (eye icon toggle),Client-side only
+Customer Registration,Social Login Options,1.3.1,Google OAuth,Disabled button with Coming Soon badge for Google sign-up,Google OAuth API (future)
+Customer Registration,Social Login Options,1.3.2,Phone OTP,Disabled button with Coming Soon badge for phone OTP sign-up,SMS Gateway (future)
+,,,,,
+,,,,,
+Profile setup Page,,,,,
+Profile Setup,Personal Details,2.2.1,Full Name,"Text input (required, pre-filled from User.full_name)",CustomerProfile.customer_name
+Profile Setup,Personal Details,2.2.2,Email Display,Read-only email field (from session user),CustomerProfile.email
+Profile Setup,Personal Details,2.2.3,Phone Number,"Tel input (required, format: 10 digits)",CustomerProfile.phone_number
+Profile Setup,Personal Details,2.2.4,Secondary Mobile,Tel input (optional),CustomerProfile.secondary_mobile
+Profile Setup,Personal Details,2.2.5,Emergency Contact,Tel input (optional),CustomerProfile.emergency_contact
+Profile Setup,Address Details,2.3.1,Address Line 1,"Textarea (required, primary address)",CustomerProfile.default_address
+Profile Setup,Address Details,2.3.2,Address Line 2,"Text input (optional, apartment/building)",CustomerProfile.address_line_2
+Profile Setup,Address Details,2.3.3,Landmark,Text input (optional),CustomerProfile.landmark
+Profile Setup,Address Details,2.3.4,Pincode,"Text input (required, 6 digits)",CustomerProfile.pincode
+Profile Setup,Address Details,2.3.5,City,Text input (required),CustomerProfile.city
+Profile Setup,Address Details,2.3.6,State,Text input (required),CustomerProfile.state
+Profile Setup,Location Detection,2.4.1,Get My Location,Button to detect current GPS location using browser geolocation API,Navigator.geolocation
+Profile Setup,Location Detection,2.4.2,Reverse Geocoding,Convert lat/lng to address using Google Maps Geocoding API,google_maps.geocode_address API
+Profile Setup,Location Detection,2.4.3,Auto-fill Address,Populate all address fields from geocoded result,CustomerProfile fields
+Profile Setup,Location Detection,2.4.4,Store Coordinates,Save geo_latitude and geo_longitude in hidden fields,"CustomerProfile.geo_latitude, geo_longitude"
+Profile Setup,Map Selection,2.5.1,Show Map Button,Open interactive Google Map in modal/container,Google Maps JavaScript API
+Profile Setup,Map Selection,2.5.2,Map Initialization,"Load map centered at stored coordinates or default (Delhi: 28.6139, 77.2090)",Google Maps API
+Profile Setup,Map Selection,2.5.3,Draggable Marker,Blue marker that user can drag to adjust location,Google Maps Marker
+Profile Setup,Map Selection,2.5.4,Address Search,Autocomplete search box to find address (Google Places Autocomplete),Google Places API
+Profile Setup,Map Selection,2.5.5,Manual Search,Search button to geocode typed address using forward_geocode API,google_maps.forward_geocode API
+Profile Setup,Map Selection,2.5.6,Click to Place,Click anywhere on map to move marker,Google Maps click event
+Profile Setup,Map Selection,2.5.7,Confirm Location,Button to save selected coordinates and reverse geocode to address,google_maps.geocode_address API
+Profile Setup,Map Selection,2.5.8,Cancel Map,Button to close map without saving,UI state
+Profile Setup,Vehicle Details,2.6.1,Vehicle Make,"Text input (required, e.g., Honda, Toyota)",CustomerVehicle.vehicle_make
+Profile Setup,Vehicle Details,2.6.2,Vehicle Model,"Text input (required, e.g., City, Fortuner)",CustomerVehicle.vehicle_model
+Profile Setup,Vehicle Details,2.6.3,Vehicle Number,"Text input (required, e.g., KA01AB1234)",CustomerVehicle.vehicle_number
+Profile Setup,Vehicle Details,2.6.4,Vehicle Type,"Dropdown (required): Hatchback, Sedan, SUV, Luxury, EV",CustomerVehicle.vehicle_type
+Profile Setup,Vehicle Details,2.6.5,Chassis Number,"Text input (optional, 17-char VIN)",CustomerVehicle.vehicle_chasis_number
+Profile Setup,Vehicle Details,2.6.6,Primary Vehicle,Checkbox to mark as primary vehicle (first vehicle auto-checked),CustomerVehicle.is_primary
+Profile Setup,Multiple Vehicles,2.7.1,Add Another Vehicle,Button to clone vehicle entry form,Client-side DOM manipulation
+Profile Setup,Multiple Vehicles,2.7.2,Remove Vehicle,Button on each vehicle entry (except first) to remove it,Client-side DOM manipulation
+Profile Setup,Multiple Vehicles,2.7.3,Minimum One Vehicle,Validation: At least 1 vehicle required before submission,Form validation
+,,,,,
+,,,,,
+Customer Profile page ,,,,,
+Customer Profile,Personal Information,3.2.1,Display Profile Form,Show editable form with current profile data,CustomerProfile doctype
+Customer Profile,Personal Information,3.2.2,Full Name,Editable text input,CustomerProfile.customer_name
+Customer Profile,Personal Information,3.2.3,Email,Read-only display,CustomerProfile.email
+Customer Profile,Personal Information,3.2.4,Phone,Editable tel input,CustomerProfile.phone_number
+Customer Profile,Personal Information,3.2.5,City,Editable text input,CustomerProfile.city
+Customer Profile,Personal Information,3.2.6,Address Line 1,Editable textarea,CustomerProfile.default_address
+Customer Profile,Personal Information,3.2.7,Address Line 2,Editable text input,CustomerProfile.address_line_2
+Customer Profile,Personal Information,3.2.8,Landmark,Editable text input,CustomerProfile.landmark
+Customer Profile,Personal Information,3.2.9,Pincode,Editable text input,CustomerProfile.pincode
+Customer Profile,Personal Information,3.2.10,State,Editable text input,CustomerProfile.state
+Customer Profile,Location Update,3.3.1,Update Location Button,Detect current GPS location and auto-fill address,"Navigator.geolocation, google_maps.geocode_address"
+Customer Profile,Location Update,3.3.2,Select on Map Button,Open interactive map to select location,Google Maps API
+Customer Profile,Location Update,3.3.3,Map Functionality,Same as Profile Setup (2.5.1 to 2.5.8),Google Maps API
+Customer Profile,Save Profile Changes,3.4.1,Save Changes Button,Submit updated profile data,customer_portal.update_profile API
+Customer Profile,Save Profile Changes,3.4.2,Update Backend,Backend updates allowed fields in CustomerProfile,CustomerProfile doctype
+Customer Profile,Save Profile Changes,3.4.3,Success Feedback,Show green alert Profile updated successfully,frappe.show_alert
+Customer Profile,My Vehicles Section,3.5.1,Load Vehicles,Fetch and display all customer vehicles on page load,customer_portal.get_customer_vehicles API
+Customer Profile,My Vehicles Section,3.5.2,Display Vehicle Cards,"Show each vehicle as card with make, model, number, type, primary badge",CustomerVehicle child table
+Customer Profile,My Vehicles Section,3.5.3,Primary Badge,Green Primary badge on primary vehicle card,CustomerVehicle.is_primary
+Customer Profile,My Vehicles Section,3.5.4,Edit Vehicle Button,Open vehicle form pre-filled with vehicle data,Client-side form
+Customer Profile,My Vehicles Section,3.5.5,Delete Vehicle Button,Remove vehicle (min 1 vehicle must remain),customer_portal.delete_vehicle API
+Customer Profile,Add/Edit Vehicle,3.6.1,Add Vehicle Button,Show empty vehicle form,Client-side form toggle
+Customer Profile,Add/Edit Vehicle,3.6.2,Vehicle Form Fields,"Make, Model, Number, Type dropdown, Primary checkbox",CustomerVehicle fields
+Customer Profile,Add/Edit Vehicle,3.6.3,Save Vehicle,"IF new: call add_vehicle API, ELSE: call update_vehicle API",customer_portal.add_vehicle / update_vehicle
+Customer Profile,Add/Edit Vehicle,3.6.4,Cancel Button,Hide form without saving,Client-side form toggle
+Customer Profile,Add/Edit Vehicle,3.6.5,Refresh List,Reload vehicles list after add/edit/delete,customer_portal.get_customer_vehicles
+Customer Profile,Account Statistics,3.7.1,Total Bookings,Count of all customer bookings,booking.get_customer_bookings API
+Customer Profile,Account Statistics,3.7.2,Total Spent,Sum of completed booking amounts,booking.get_customer_bookings API
+Customer Profile,Account Statistics,3.7.3,Loyalty Tier,"Calculate tier: Bronze (<10k), Silver (10k-25k), Gold (25k-50k), Platinum (50k+)",Client-side calculation
+Customer Profile,Account Statistics,3.7.4,Member Since,Display CustomerProfile.creation date,CustomerProfile.creation
+Customer Profile,Account Statistics,3.7.5,Status Badge,Display customer_status (Active/Inactive),CustomerProfile.customer_status
+Customer Profile,Quick Actions,3.8.1,Book Service Link,Navigate to /customer/book-service,Navigation
+Customer Profile,Quick Actions,3.8.2,My Bookings Link,Navigate to /customer/bookings,Navigation
+Customer Profile,Quick Actions,3.8.3,Dashboard Link,Navigate to /customer/dashboard,Navigation
+,,,,,
+Dashboard Page ,,,,,
+Customer Dashboard,Welcome Section,4.2.1,Welcome Message,"Display Welcome back, {customer_name}!",CustomerProfile.customer_name
+Customer Dashboard,Welcome Section,4.2.2,Current Date,Display formatted current date,Client-side Date
+Customer Dashboard,Statistics Cards,4.3.1,Total Bookings Card,Count of all customer bookings,booking.get_customer_bookings API
+Customer Dashboard,Statistics Cards,4.3.2,Active Subscriptions Card,Count of active subscriptions (status=Active),Subscription doctype
+Customer Dashboard,Statistics Cards,4.3.3,Total Spent Card,Sum of completed booking amounts (calculated client-side),booking.get_customer_bookings API
+Customer Dashboard,Statistics Cards,4.3.4,Loyalty Tier Card,Display tier badge: Bronze/Silver/Gold/Platinum,Client-side calculation
+Customer Dashboard,Active Subscription Widget,4.4.1,Check Subscription,"On page load, call get_active_subscription API",customer_portal.get_active_subscription
+Customer Dashboard,Active Subscription Widget,4.4.2,Show Loading State,Display spinner while fetching subscription,UI loading state
+Customer Dashboard,Active Subscription Widget,4.4.3,IF Active Subscription,Display subscription card with details,Subscription doctype
+Customer Dashboard,Active Subscription Widget,4.4.4,Plan Name,Display subscription plan name,ProductService.product_name
+Customer Dashboard,Active Subscription Widget,4.4.5,Washes Progress,Show X / Y washes used with progress bar,Subscription.used_washes_current_month / washes_per_month
+Customer Dashboard,Active Subscription Widget,4.4.6,Days Remaining,Calculate and display days until billing_cycle_end,"date_diff(billing_cycle_end, today)"
+Customer Dashboard,Active Subscription Widget,4.4.7,View Subscription Button,Link to /customer/subscription/my-subscription?subscription_id={id},Navigation
+Customer Dashboard,Google Calendar Widget,4.5.1,Check Calendar Status,"On page load, call get_calendar_sync_status API",google_calendar_integration.get_calendar_sync_status
+Customer Dashboard,Google Calendar Widget,4.5.2,Show Loading State,Display spinner while checking status,UI loading state
+Customer Dashboard,Google Calendar Widget,4.5.3,IF Connected,Display Connected status with synced events count,CustomerProfile.google_calendar_enabled
+Customer Dashboard,Google Calendar Widget,4.5.4,Synced Events Count,Count bookings with google_calendar_synced=1,Booking.google_calendar_synced
+Customer Dashboard,Google Calendar Widget,4.5.5,Disconnect Button,Call disconnect_google_calendar API with confirmation,google_calendar_integration.disconnect_google_calendar
+Customer Dashboard,Google Calendar Widget,4.5.6,ELSE Not Connected,Display Not connected with Connect Calendar button,UI state
+Customer Dashboard,Google Calendar Widget,4.5.7,Connect Calendar Button,Call get_authorization_url API and redirect to Google OAuth,google_calendar_integration.get_authorization_url
+Customer Dashboard,Quick Actions,4.6.1,Book Service Button,Navigate to /customer/book-service,Navigation
+Customer Dashboard,Quick Actions,4.6.2,Subscribe Button,Navigate to /customer/subscription/new,Navigation
+Customer Dashboard,Quick Actions,4.6.3,My Bookings Button,Navigate to /customer/bookings,Navigation
+Customer Dashboard,Quick Actions,4.6.4,My Quotes Button,Navigate to /customer/quote/my-quotes,Navigation
+Customer Dashboard,Recent Bookings Table,4.7.1,Load Recent Bookings,Fetch last 5 bookings on page load (server-side),Booking doctype
+Customer Dashboard,Recent Bookings Table,4.7.2,Display Booking ID,Show booking_id in table,Booking.booking_id
+Customer Dashboard,Recent Bookings Table,4.7.3,Display Service,Show product_name,Booking.product_name
+Customer Dashboard,Recent Bookings Table,4.7.4,Display Date,Show formatted booking_date,Booking.booking_date
+Customer Dashboard,Recent Bookings Table,4.7.5,Display Status,"Show status with color-coded badge (Completed=green, Cancelled=red, In Progress=blue, Confirmed=yellow, Pending=gray)",Booking.status
+Customer Dashboard,Recent Bookings Table,4.7.6,Display Amount,Show formatted total_amount with ₹ symbol,Booking.total_amount
+Customer Dashboard,Recent Bookings Table,4.7.7,IF No Bookings,Display empty state with Book your first service message and button,UI empty state
+,,,,,
+Customer Dashboard,Client-Side Stats,4.8.1,Load Stats Function,"On page load, call booking.get_customer_bookings API",booking.get_customer_bookings
+Customer Dashboard,Client-Side Stats,4.8.2,Calculate Total Spent,"Filter completed bookings, sum total_amount",Client-side calculation
+Customer Dashboard,Client-Side Stats,4.8.3,Calculate Loyalty Tier,"IF spent ≥50k: Platinum, ELSE IF ≥25k: Gold, ELSE IF ≥10k: Silver, ELSE: Bronze",Client-side calculation
+Customer Dashboard,Client-Side Stats,4.8.4,Update UI,Display calculated values in stats cards,DOM manipulation
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+BOOK SERVICE LANDING PAGE,,,,,
+,,,,,
+,,,,,
+Book Service Landing,Service Type Display,6.1.1,Display Service Types,Show 2 cards: One-Time and Subscription,UI display
+Book Service Landing,Service Type Display,6.1.2,One-Time Features,"Display: Pay per service, Flexible scheduling, No commitment, Instant booking",UI content
+Book Service Landing,Service Type Display,6.1.3,Subscription Features,"Display: Discounted rates, Priority scheduling, Save up to 20%",UI content
+Book Service Landing,Service Type Selection,6.2.1,Select One-Time,Store frequency_type=One-time in sessionStorage,sessionStorage
+Book Service Landing,Service Type Selection,6.2.2,Select Subscription,Store frequency_type=Subscription in sessionStorage,sessionStorage
+Book Service Landing,Service Type Selection,6.2.3,Visual Feedback,Highlight selected card with blue border,CSS styling
+Book Service Landing,Navigation,6.3.1,Redirect One-Time,Navigate to /customer/book-service/category,Navigation
+Book Service Landing,Navigation,6.3.2,Redirect Subscription,Navigate to /customer/subscription,Navigation
+,,,,,
+ONE-TIME BOOKING FLOW,,,,,
+,,,,,
+One-Time Category,Progress Indicator,7.1.1,Display Progress,"Show: 1.Type (completed), 2.Category (active), 3-8 (pending)",UI progress bar
+One-Time Category,Load Categories,7.1.2,Fetch Categories,Fetch all active ServiceCategory DOCTYPE,ServiceCategory doctype
+One-Time Category,Display Categories,7.1.3,Create Category Cards,"Show each with image/icon, name, description",UI cards
+One-Time Category,Navigation,7.1.4,Redirect to Vehicle,Navigate to /customer/book-service/vehicle,Navigation
+,,,,,
+,,,,,
+One-Time Vehicle,Progress Indicator,8.1.1,Display Progress,"Show: 1-2 (completed), 3.Vehicle (active), 4-8 (pending)",UI progress bar
+One-Time Vehicle,Load Vehicles,8.1.2,Fetch Vehicles,Call customer_portal.get_customer_vehicles,customer_portal.get_customer_vehicles
+One-Time Vehicle,Display Vehicles,8.1.3,Create Vehicle Cards,"Show make, model, number, type, primary badge",CustomerVehicle child table
+One-Time Vehicle,Navigation,8.1.4,Redirect to Services,Navigate to /customer/book-service/services,Navigation
+,,,,,
+One-Time Service,Page Access,9.1.1,Validate Previous Steps,"Check category, frequency_type, vehicle_type exist",sessionStorage validation
+One-Time Service,Progress Indicator,9.1.2,Display Progress,"Show: 1-3 (completed), 4.Service (active), 5-8 (pending)",UI progress bar
+,,,,,
+,,,,,
+One-Time Service,Display Services,9.3.1,Create Service Cards,"Show name, description, price, duration, vehicle type",ProductService doctype
+One-Time Service,Display Services,9.3.2,Service Badge,Show ONE-TIME  badge ,UI badge
+One-Time Service,Display Services,9.3.3,Included Addons,Display list with addon_name,ProductServiceAddon child table
+,,,,,
+,,,,,
+One-Time Addons,Progress Indicator,10.1.2,Display Progress,"Show: 1-4 (completed), 5.Add-ons (active), 6-8 (pending)",UI progress bar
+One-Time Addons,Service Summary,10.2.1,Display Selected Service,"Show service name, price, included addons",Service data
+,,,,,
+,,,,,
+One-Time Addons,Display Addons,10.4.1,Create Addon Cards,"Show addon_name, description, unit_price, checkbox",Addon doctype
+One-Time Addons,Check Resources,10.6.2,Check Resource Needs,Check if service or selected addons require water/electricity,Resource validation
+One-Time Addons,Navigation,10.6.3,Navigate to Resources,"IF resources needed, redirect to resources page",Navigation
+One-Time Addons,Navigation,10.6.4,Navigate to Schedule,"IF no resources, redirect to schedule page",Navigation
+,,,,,
+,,,,,
+One-Time Schedule,Progress Indicator,11.1.2,Display Progress,"Show: 1-6 (completed), 7.Schedule (active), 8 (pending)",UI progress bar
+One-Time Schedule,Calendar Display,11.2.1,Initialize Calendar,Display calendar for current month with navigation,JavaScript Date
+One-Time Schedule,Calendar Display,11.2.2,Previous Month Button,"Disable if current month, enable otherwise",Date validation
+One-Time Schedule,Calendar Display,11.2.3,Next Month Button,"Disable if 3 months ahead, enable otherwise",Date validation
+One-Time Schedule,Calendar Display,11.2.4,Render Days,"Display all days in 7-column grid, mark past as disabled",Calendar grid
+One-Time Schedule,Calendar Display,11.2.5,Day Status Colors,"Available (green), Limited (yellow), Full (red), Past (gray)",CSS classes
+One-Time Schedule,Date Selection,11.3.1,Select Date,Store selected_date in sessionStorage,sessionStorage
+One-Time Schedule,Date Selection,11.3.2,Validate Date,Prevent past date selection with error,Date validation
+,,,,,
+One-Time Schedule,Date Selection,11.3.4,Show Slots Section,Display time slots section below calendar,UI state
+One-Time Schedule,Load Slots,11.4.1,Fetch Slots,Call booking.get_available_slots_enhanced with date and product_id,booking.get_available_slots_enhanced
+,,,,,
+One-Time Schedule,Display Slots,11.5.1,Create Slot Cards,"Show start time, end time, capacity badge, status",BookingSlot doctype
+One-Time Schedule,Display Slots,11.5.2,Capacity Badge,Show X slots left with gradient and pulse animation,UI badge
+One-Time Schedule,Display Slots,11.5.3,Slot Status,"Available (green check), Full (red X), Expired (gray clock)",Slot validation
+One-Time Schedule,Display Slots,11.5.4,Disable Expired,"IF end_time < now, mark unavailable",Time validation
+,,,,,
+One-Time Schedule,Slot Selection,11.6.1,Check Availability,Call booking.check_slot_availability,booking.check_slot_availability
+One-Time Schedule,Navigation,11.8.1,Continue to Summary,Navigate to /customer/book-service/summary-payment,Navigation
+One-Time Schedule,Legend,11.9.1,Display Legend,Show color legend for day statuses,UI legend
+,,,,,
+One-Time Summary,Page Access,12.1.1,Validate All Steps,"Check all required data: category, frequency, vehicle, service, date, slot",sessionStorage validation
+One-Time Summary,Progress Indicator,12.1.2,Display Progress,"Show: 1-7 (completed), 8.Review & Pay (active)",UI progress bar
+,,,,,
+One-Time Summary,Service Summary,12.3.1,Display Service,"Show service name, category, type, base price, included addons",Service data
+One-Time Summary,Vehicle Summary,12.3.2,Display Vehicle,Show vehicle number and type,Vehicle data
+One-Time Summary,Schedule Summary,12.3.3,Display Schedule,Show formatted date and time slot,Schedule data
+One-Time Summary,Addons Summary,12.3.4,Display Optional Addons,"IF addons selected, show list with names and prices",Addon data
+One-Time Summary,Resources Summary,12.3.5,Display Resources,"IF resources not provided, show water/electricity status",Resource data
+One-Time Summary,Calculate Price,12.4.1,Call Pricing API,Call booking.calculate_booking_price with all parameters,booking.calculate_booking_price
+One-Time Summary,Price Breakdown,12.4.2,Display Base Price,Show service base_price,Pricing data
+One-Time Summary,Price Breakdown,12.4.3,Display Addons Total,"IF addons selected, show addons_total",Pricing data
+One-Time Summary,Price Breakdown,12.4.4,Display Water Surcharge,"IF water not provided, show water_surcharge",Pricing data
+One-Time Summary,Price Breakdown,12.4.5,Display Electricity Surcharge,"IF electricity not provided, show electricity_surcharge",Pricing data
+One-Time Summary,Price Breakdown,12.4.6,Display Total Amount,Show total_amount in large bold text,Pricing data
+One-Time Summary,Create Booking,12.6.2,Call Create API,Call booking.create_booking with all parameters,booking.create_booking
+One-Time Summary,Create Booking,12.6.3,Handle Slot Error,"IF slot unavailable error, show special modal with Select Another Slot button",Error handling
+One-Time Summary,Create Booking,12.6.4,Handle Generic Error,Show error message for other failures,Error handling
+One-Time Summary,Process Payment,12.7.1,Create Token Payment,Call booking.create_token_payment with booking_name,booking.create_token_payment
+One-Time Summary,Process Payment,12.7.2,Confirm Payment,Call booking.confirm_payment_and_sync_calendar,booking.confirm_payment_and_sync_calendar
+One-Time Summary,Success,12.8.1,Store Booking Data,Store confirmed_booking in sessionStorage for confirmation page,sessionStorage
+One-Time Summary,Success,12.8.2,Show Success Modal,"Display modal with booking details, payment info, auto-redirect message",frappe.msgprint
+One-Time Summary,Success,12.8.3,Auto Redirect,Redirect to /customer/book-service/booking-confirmation after 3 seconds,Navigation
+One-Time Summary,Navigation,12.9.1,Back Button,Navigate back to schedule page,Navigation
+,,,,,
+One-Time Confirmation,Page Access,13.1.1,Check Booking Data,Check for confirmed_booking or confirmed_booking_id in sessionStorage,sessionStorage
+One-Time Confirmation,Booking Details,13.4.1,Display Booking ID,Show booking_id with hashtag icon,Booking data
+One-Time Confirmation,Booking Details,13.4.2,Display Status,Show status badge (Confirmed/Pending),Booking data
+One-Time Confirmation,Booking Details,13.4.3,Display Service,Show product_name,Booking data
+One-Time Confirmation,Booking Details,13.4.4,Display Vehicle,Show vehicle_number,Booking data
+One-Time Confirmation,Booking Details,13.4.5,Display Date,Show formatted booking_date,Booking data
+One-Time Confirmation,Booking Details,13.4.6,Display Time,Show formatted slot_start_time,Booking data
+One-Time Confirmation,Payment Details,13.5.1,Display Total Amount,Show total_amount,Booking data
+One-Time Confirmation,Payment Details,13.5.2,Display Paid Now,Show upfront_charged in green,Booking data
+One-Time Confirmation,Payment Details,13.5.3,Display Balance Due,Show balance_due,Booking data
+One-Time Confirmation,Invoice,13.6.1,Display Invoice Link,"IF invoice_id exists, show View Invoice button",Booking data
+,,,,,
+,,,,,
+One-Time Confirmation,Actions,13.8.1,View Bookings Button,Navigate to /customer/bookings,Navigation
+One-Time Confirmation,Actions,13.8.2,Book Another Button,Navigate to /customer/book-service,Navigation
+,,,,,
+,,,,,
+,,,,,
+SUBSCRIPTION QUOTE REQUEST FLOW,,,,,
+,,,,,
+Subscription Plans,Page Access,14.1.2,Store Type,Store frequency_type=Subscription,
+Subscription Plans,Filter Section,14.2.1,Vehicle Count Filter,"Display: 1 Vehicle (active), 2 Vehicles buttons",UI toggle
+Subscription Plans,Filter Section,14.2.2,Toggle 1 Vehicle,Filter plans with one vehcile_type,Plan filtering
+Subscription Plans,Filter Section,14.2.3,Toggle 2 Vehicles,Filter plans with two vehcile_type,Plan filtering
+Subscription Plans,Load Plans,14.3.1,Fetch Plans,Call subscription_flow_api.get_subscription_plans,subscription_flow_api.get_subscription_plans
+,,,,,
+Subscription Plans,Display Plans,14.4.1,Create Plan Cards,"Show name, price, washes/month, vehicle types badge",ProductService doctype
+Subscription Plans,Display Plans,14.4.2,Vehicle Badge,"Show combination (e.g., Hatchback + Sedan)",Plan metadata
+Subscription Plans,Display Plans,14.4.3,Load Services,Call subscription_flow_api.get_plan_services,subscription_flow_api.get_plan_services
+Subscription Plans,Display Plans,14.4.4,Display Services,Group by EXTERIOR/INTERIOR with quantities,ProductServiceAddon child table
+Subscription Plans,Navigation,14.5.2,Redirect to Customize,Navigate to /customer/subscription/customize-plan,Navigation
+Subscription Plans,Custom Plan,14.6.1,Custom Button,Show Coming Soon button,UI button
+Subscription Plans,Custom Plan,14.6.2,Coming Soon Modal,Display: Feature available soon,frappe.msgprint
+,,,,,
+Subscription Customize,Page Access,15.1.1,Validate Plan,Check selectedPlan exists in sessionStorage,sessionStorage validation
+Subscription Customize,Load Vehicles,15.2.1,Fetch Vehicles,Call customer_portal.get_customer_vehicles,customer_portal.get_customer_vehicles
+Subscription Customize,Display Vehicles,15.2.2,Show Checkboxes,"Display each with checkbox, make, model, number, type",CustomerVehicle child table
+Subscription Customize,Validate Selection,15.3.1,Validate Count,Ensure count matches plan max_vehicles_allowed,Plan validation
+Subscription Customize,Navigation,15.3.4,Continue to Days,Navigate to /customer/subscription/days-time,Navigation
+,,,,,
+Subscription Days Time,Page Access,16.1.1,Validate Previous,Check selectedPlan and selectedVehicles,sessionStorage validation
+Subscription Days Time,Preferred Days,16.2.1,Display Checkboxes,Show Mon-Sun checkboxes,UI checkboxes
+Subscription Days Time,Preferred Days,16.2.2,Select Days,Allow multiple day selection,Multi-select
+Subscription Days Time,Preferred Days,16.2.3,Validate Days,Ensure at least 1 day selected,Form validation
+Subscription Days Time,Preferred Days,16.2.4,Store Days,Store preferredDays array,sessionStorage
+Subscription Days Time,Time Slot,16.3.1,Display Dropdown,"Show: Morning (6AM-10AM), Afternoon (10AM-2PM), Evening (2PM-6PM)",UI dropdown
+Subscription Days Time,Time Slot,16.3.2,Select Slot,Allow single selection,Single select
+Subscription Days Time,Time Slot,16.3.3,Validate Slot,Ensure slot selected,Form validation
+Subscription Days Time,Navigation,16.4.1,Continue to Amenities,Navigate to /customer/subscription/amenities,Navigation
+,,,,,
+Subscription Amenities,Page Access,17.1.1,Validate Previous,"Check plan, vehicles, days, time",sessionStorage validation
+Subscription Amenities,Amenity Selection,17.2.1,Electricity Checkbox,Show: Electricity Available (checked default),UI checkbox
+Subscription Amenities,Amenity Selection,17.2.2,Water Checkbox,Show: Water Available (checked default),UI checkbox
+Subscription Amenities,Amenity Selection,17.2.3,Electricity Info,"Show: IF unchecked, additional ₹X per wash",UI info
+Subscription Amenities,Amenity Selection,17.2.4,Water Info,"Show: IF unchecked, additional ₹Y per wash",UI info
+,,,,,
+Subscription Amenities,Navigation,17.3.1,Continue to Summary,Navigate to /customer/subscription/summary,Navigation
+,,,,,
+Subscription Summary,Page Access,18.1.1,Validate All,Check all required sessionStorage data,sessionStorage validation
+Subscription Summary,Plan Details,18.2.1,Display Plan Name,Show selected plan name,sessionStorage
+Subscription Summary,Plan Details,18.2.2,Display Vehicle Count,Show number of vehicles,sessionStorage
+Subscription Summary,Plan Details,18.2.3,Display Frequency,Show washes per month,Plan data
+Subscription Summary,Included Services,18.3.1,Load Services,Call subscription_flow_api.get_plan_services,subscription_flow_api.get_plan_services
+Subscription Summary,Included Services,18.3.2,Display Services,Group by EXTERIOR/INTERIOR with quantities,Service data
+Subscription Summary,Selected Vehicles,18.4.1,Display List,Show each vehicle with number and type,sessionStorage
+Subscription Summary,Schedule,18.5.1,Display Days,Show comma-separated days,sessionStorage
+Subscription Summary,Schedule,18.5.2,Display Time,Show selected time slot,sessionStorage
+Subscription Summary,Amenities,18.6.1,Electricity Status,Show checkmark or X,sessionStorage
+Subscription Summary,Amenities,18.6.2,Water Status,Show checkmark or X,sessionStorage
+Subscription Summary,Price Calculation,18.7.1,Calculate Price,Call subscription_flow_api.calculate_subscription_price,subscription_flow_api.calculate_subscription_price
+Subscription Summary,Price Breakdown,18.7.2,Base Price,Show plan base_price,Pricing data
+Subscription Summary,Price Breakdown,18.7.3,Vehicle Surcharge,"IF 2 vehicles, show premium % and amount",Pricing data
+Subscription Summary,Price Breakdown,18.7.4,Distance Markup,"IF distance > 0, show % and amount",Pricing data
+Subscription Summary,Price Breakdown,18.7.5,Time Premium,"IF premium slot, show % and amount",Pricing data
+Subscription Summary,Price Breakdown,18.7.6,Amenity Fee,"IF electricity/water missing, show fee",Pricing data
+Subscription Summary,Price Breakdown,18.7.7,Total Monthly,Show final estimated_monthly_price,Pricing data
+Subscription Summary,Price Breakdown,18.7.8,Per Wash,Calculate total / washes_per_month,Calculated value
+Subscription Summary,Price Breakdown,18.7.9,Formula,Show: [Base × (1+Vehicle%) × (1+Distance%+Time%)] + Amenity,Pricing formula
+Subscription Summary,Contact Details,18.8.1,Load Customer,Call subscription_flow_api.get_customer_location,subscription_flow_api.get_customer_location
+Subscription Summary,Contact Details,18.8.2,Name Field,"Text input (required, pre-filled)",CustomerProfile.customer_name
+Subscription Summary,Contact Details,18.8.3,Phone Field,"Tel input (required, pre-filled)",CustomerProfile.phone_number
+Subscription Summary,Contact Details,18.8.4,Email Field,"Email input (required, pre-filled)",CustomerProfile.email
+Subscription Summary,Contact Details,18.8.5,Address Line 1,"Text input (required, pre-filled)",CustomerProfile.address_line1
+Subscription Summary,Contact Details,18.8.6,Address Line 2,"Text input (optional, pre-filled)",CustomerProfile.address_line2
+Subscription Summary,Contact Details,18.8.7,Landmark,"Text input (optional, pre-filled)",CustomerProfile.landmark
+Subscription Summary,Contact Details,18.8.8,City,"Text input (required, pre-filled)",CustomerProfile.city
+Subscription Summary,Contact Details,18.8.9,State,"Text input (required, pre-filled)",CustomerProfile.state
+Subscription Summary,Contact Details,18.8.10,Pincode,"Text input (required, 6-digit pattern)",CustomerProfile.pincode
+Subscription Summary,Contact Details,18.8.11,Notes,Textarea for additional notes (optional),User input
+Subscription Summary,Terms,18.9.1,Terms Checkbox,Show: I agree to terms and authorize contact,UI checkbox
+Subscription Summary,Terms,18.9.2,Enable Submit,Enable button only when checked,Form validation
+Subscription Summary,Submit Request,18.10.1,Validate Form,Check all required fields filled,Form validation
+Subscription Summary,Submit Request,18.10.2,Create Quote,Call subscription_flow_api.submit_subscription_request,subscription_flow_api.submit_subscription_request
+Subscription Summary,Submit Request,18.10.3,Create Payment,Call payment_gateway_integration.create_upfront_payment_link,payment_gateway_integration.create_upfront_payment_link
+Subscription Summary,Submit Request,18.10.4,Clear Session,Clear all sessionStorage,sessionStorage.clear()
+Subscription Summary,Submit Request,18.10.5,Redirect Payment,Redirect to Razorpay payment link,Navigation
+Subscription Summary,Submit Request,18.10.6,Handle Errors,"Show error, re-enable button",Error handling
+Subscription Summary,Navigation,18.11.1,Back Button,Navigate to /customer/subscription/amenities,Navigation
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+BOOKINGS PAGE,https://yawlit.duckdns.org/customer/bookings,,,,
+Bookings,Quick Actions,19.1.4,All Invoices Button,Navigate to /customer/invoices,Navigation
+Bookings,Quick Actions,19.1.5,Book New Service Button,Navigate to /customer/book-service,Navigation
+Bookings,Filter Tabs,19.2.1,All Tab,Show all bookings regardless of status,Filter logic
+Bookings,Filter Tabs,19.2.2,Pending Tab,Filter bookings with status=Pending,Filter logic
+Bookings,Filter Tabs,19.2.3,Confirmed Tab,Filter bookings with status=Confirmed,Filter logic
+Bookings,Filter Tabs,19.2.4,Completed Tab,Filter bookings with status=Completed,Filter logic
+Bookings,Filter Tabs,19.2.5,Cancelled Tab,Filter bookings with status=Cancelled,Filter logic
+Bookings,Sort Options,19.2.6,Sort Dropdown,Show Most Recent and Oldest First options,UI dropdown
+Bookings,Sort Options,19.2.7,Apply Sort,Sort bookings by booking_date based on selection,Client-side sorting
+Bookings,Statistics Cards,19.3.1,Total Bookings,Count and display total bookings,booking.get_customer_bookings
+Bookings,Statistics Cards,19.3.2,Pending Count,Count bookings with status=Pending,Client-side calculation
+Bookings,Statistics Cards,19.3.3,Completed Count,Count bookings with status=Completed,Client-side calculation
+Bookings,Statistics Cards,19.3.4,Total Spent,Sum total_amount for completed bookings,Client-side calculation
+Bookings,Load Bookings,19.4.1,Fetch All Bookings,Call booking.get_customer_bookings with status=null,booking.get_customer_bookings
+,,,,,
+,,,,,
+Bookings,Display Bookings,19.5.2,Show Booking ID,Display booking_id,Booking data
+Bookings,Display Bookings,19.5.3,Show Service Name,Display product_name,Booking data
+Bookings,Display Bookings,19.5.4,Show Status Badge,Display status with color coding,UI badge
+Bookings,Display Bookings,19.5.5,Show Subscription Badge,Display subscription indicator if is_subscription_service=1,Booking data
+Bookings,Display Bookings,19.5.6,Show Date,Display formatted booking_date,Booking data
+Bookings,Display Bookings,19.5.7,Show Amount,Display total_amount,Booking data
+Bookings,Display Bookings,19.5.8,View Details Button,Navigate to /customer/booking?id={booking_name},Navigation
+Bookings,Display Bookings,19.5.9,View Invoice Button,Navigate to /customer/invoice?invoice={invoice_id},Navigation
+Bookings,Display Bookings,19.5.10,Empty State,Show No bookings found message,UI empty state
+Bookings,Reschedule Options,19.6.1,Reschedule Button,Show for Pending/Confirmed bookings,UI button
+Bookings,Reschedule Options,19.6.2,Show Options Modal,Display Date/Time Only or Services Only or Both options,frappe.msgprint
+Bookings,Reschedule Options,19.6.3,Date/Time Reschedule,Show date picker and time slot selector,UI form
+Bookings,Reschedule Options,19.6.4,Services Reschedule,Show available services selection,UI form
+Bookings,Reschedule Options,19.6.5,Complete Reschedule,Show both date/time and services selection,UI form
+Bookings,Cancel Booking,19.7.2,Check Eligibility,Call cancellation.check_cancellation_eligibility,cancellation.check_cancellation_eligibility
+Bookings,Cancel Booking,19.7.3,Show Cancellation Modal,Display hours until booking and cancellation fee,frappe.msgprint
+Bookings,Cancel Booking,19.7.4,Display Fee Details,Show cancellation_fee and refund_amount,Eligibility data
+Bookings,Cancel Booking,19.7.5,Display Wash Credit,Show will_credit_wash if subscription booking,Eligibility data
+Bookings,Cancel Booking,19.7.6,Reason Input,Textarea for cancellation reason,UI input
+Bookings,Cancel Booking,19.7.7,Confirm Cancellation,Call booking_management.cancel_booking,booking_management.cancel_booking
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+INVOICES PAGE,https://yawlit.duckdns.org/customer/invoices,,,,
+,,,,,
+Invoices,Page Access,20.1.2,Customer Profile Check,Verify CustomerProfile exists for user,CustomerProfile doctype
+Invoices,Page Header,20.2.3,Back Button,Navigate to /customer/bookings,Navigation
+Invoices,Filter Section,20.3.1,Payment Status Filter,Dropdown with All/Pending/Partially Paid/Fully Paid,UI dropdown
+Invoices,Filter Section,20.3.2,Date From Filter,Date input for start date,UI date input
+Invoices,Filter Section,20.3.3,Date To Filter,Date input for end date,UI date input
+Invoices,Filter Section,20.3.4,Apply Filters Button,Call get_customer_invoices with filter parameters,customer_portal.get_customer_invoices
+Invoices,Filter Section,20.3.5,Clear Filters Button,Reset all filters and reload,Client-side reset
+Invoices,Load Invoices,20.4.1,Fetch Invoices,Call customer_portal.get_customer_invoices,customer_portal.get_customer_invoices
+Invoices,Display Invoices,20.5.2,Show Invoice ID,Display invoice_id,Invoice data
+Invoices,Display Invoices,20.5.3,Show Invoice Date,Display formatted invoice_date,Invoice data
+Invoices,Display Invoices,20.5.4,Show Total Amount,Display total with currency symbol,Invoice data
+Invoices,Display Invoices,20.5.5,Show Payment Status,Display payment_status with color badge,Invoice data
+Invoices,Display Invoices,20.5.6,Show Booking Link,Display linked booking_id if exists,Invoice data
+Invoices,Display Invoices,20.5.7,View Button,Navigate to /customer/invoice?invoice={invoice_id},Navigation
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+INVOICE DETAIL PAGE,,,,,
+Invoice Detail (view button  in rvery invoice),Page Access,21.1.1,Authentication Check,Redirect to /login if user is Guest,Session management
+Invoice Detail,Page Access,21.1.2,Get Invoice Name,Extract invoice parameter from URL,frappe.form_dict
+Invoice Detail,Page Access,21.1.3,Validate Invoice Exists,Check if invoice exists in Invoice doctype,Invoice doctype
+Invoice Detail,Page Access,21.1.4,Check Permission,Verify invoice.customer matches logged-in customer,CustomerProfile doctype
+Invoice Detail,Page Access,21.1.5,Show Error State,Display error message if not found or no permission,UI error state
+Invoice Detail,Load Invoice,21.2.1,Fetch Invoice,Get Invoice document with all fields,frappe.get_doc
+Invoice Detail,Load Invoice,21.2.2,Get Customer Details,Load customer_name and contact info,CustomerProfile doctype
+Invoice Detail,Load Invoice,21.2.3,Get Booking Details,Load booking_id if invoice.booking exists,Booking doctype
+Invoice Detail,Load Invoice,21.2.4,Get Payment History,Fetch all payments for booking with status=Success,Payment doctype
+Invoice Detail,Load Invoice,21.2.5,Calculate Actual Paid,Sum payment amounts to get total_paid,Payment calculation
+Invoice Detail,Load Invoice,21.2.6,Calculate Balance,Calculate invoice.total - total_paid,Balance calculation
+Invoice Detail,Header Section,21.3.1,Display Company Name,Show Yawlit Automotive,UI display
+Invoice Detail,Header Section,21.3.2,Display Company Info,Show contact details,UI display
+Invoice Detail,Header Section,21.3.3,Display Invoice Title,Show INVOICE heading,UI display
+Invoice Detail,Header Section,21.3.4,Display Invoice ID,Show invoice_id,Invoice data
+Invoice Detail,Customer Details,21.4.1,Display Bill To Label,Show BILL TO: heading,UI display
+Invoice Detail,Customer Details,21.4.2,Display Customer Name,Show customer_name,Invoice data
+Invoice Detail,Customer Details,21.4.3,Display Email,Show customer_email if exists,Invoice data
+Invoice Detail,Customer Details,21.4.4,Display Phone,Show customer_phone if exists,Invoice data
+Invoice Detail,Invoice Info,21.5.1,Display Invoice Date,Show formatted invoice_date,Invoice data
+Invoice Detail,Invoice Info,21.5.2,Display Due Date,Show formatted due_date if exists,Invoice data
+Invoice Detail,Invoice Info,21.5.3,Display Payment Status,Show payment_status,Invoice data
+Invoice Detail,Invoice Info,21.5.4,Display Booking ID,Show booking_id if exists,Invoice data
+Invoice Detail,Services Table,21.6.1,Display Services Header,Show Services heading,UI display
+Invoice Detail,Services Table,21.6.2,Create Services Table,Display table with columns: Service/Type/Qty/Unit Price/Amount,UI table
+Invoice Detail,Services Table,21.6.3,List Services,Loop through invoice.services and display rows,Invoice.services child table
+Invoice Detail,Services Table,21.6.4,Show Service Description,Display service description,Service data
+Invoice Detail,Services Table,21.6.5,Show Service Type,Display service_type,Service data
+Invoice Detail,Services Table,21.6.6,Show Quantity,Display qty,Service data
+Invoice Detail,Services Table,21.6.7,Show Unit Price,Display formatted unit_price,Service data
+Invoice Detail,Services Table,21.6.8,Show Amount,Display formatted amount,Service data
+Invoice Detail,Add-ons Table,21.7.1,Display Add-ons Header,Show Add-ons & Extras heading,UI display
+Invoice Detail,Add-ons Table,21.7.2,Create Add-ons Table,Display table with columns: Description/Qty/Unit Price/Amount,UI table
+Invoice Detail,Add-ons Table,21.7.3,List Add-ons,Loop through invoice.addons and display rows,Invoice.addons child table
+Invoice Detail,Totals Section,21.8.1,Display Subtotal,Show invoice.subtotal,Invoice data
+Invoice Detail,Totals Section,21.8.2,Display Taxes,Show invoice.taxes if > 0,Invoice data
+Invoice Detail,Totals Section,21.8.3,Display Discounts,Show invoice.discounts if > 0,Invoice data
+Invoice Detail,Totals Section,21.8.4,Display Adjustment,Show invoice.adjustment if != 0,Invoice data
+Invoice Detail,Totals Section,21.8.5,Display Total,Show invoice.total in bold,Invoice data
+Invoice Detail,Payment Summary,21.9.1,Display Summary Header,Show Payment Summary heading,UI display
+Invoice Detail,Payment Summary,21.9.2,Display Total Amount,Show invoice.total,Invoice data
+Invoice Detail,Payment Summary,21.9.3,Display Amount Paid,Show actual_paid (calculated),Payment calculation
+Invoice Detail,Payment Summary,21.9.4,Display Balance Due,Show actual_balance if > 0,Payment calculation
+Invoice Detail,Payment Summary,21.9.5,Display Fully Paid,Show Fully Paid message if balance = 0,UI state
+Invoice Detail,Payment History,21.10.1,Display History Header,Show Payment History heading,UI display
+Invoice Detail,Payment History,21.10.2,Create History Table,Display table with Date/Type/Method/Amount,UI table
+Invoice Detail,Payment History,21.10.3,List Payments,Loop through payments and display rows,Payment data
+Invoice Detail,Footer,21.11.1,Display Terms,Show Terms & Conditions text,UI display
+Invoice Detail,Action Buttons,21.12.1,Pay Balance Button,Show if actual_balance > 0,UI button
+Invoice Detail,Action Buttons,21.12.2,Process Payment,Call payment_api.create_balance_payment,payment_api.create_balance_payment
+Invoice Detail,Action Buttons,21.12.3,Print Invoice Button,Trigger window.print(),Window.print
+Invoice Detail,Action Buttons,21.12.4,View All Invoices Button,Navigate to /customer/invoices,Navigation
+Invoice Detail,Action Buttons,21.12.5,My Bookings Button,Navigate to /customer/bookings,Navigation
+Invoice Detail,Action Buttons,21.12.6,View Booking Button,Navigate to /customer/booking?id={booking},Navigation
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+MY QUOTES PAGE,https://yawlit.duckdns.org/customer/quote/my-quotes,,,,
+,,,,,
+My Quotes,Page Header,22.2.1,Display Title,Show My Subscription Quotes heading,UI display
+My Quotes,Page Header,22.2.2,Display Subtitle,Show View and manage your subscription quotes,UI display
+My Quotes,Load Quotes,22.3.1,Fetch Quotes,Call subscription_flow_api.get_customer_quotes,subscription_flow_api.get_customer_quotes
+,,,,,
+My Quotes,Display Quotes,22.4.1,Create Quote Cards,Display each quote as card,UI cards
+My Quotes,Display Quotes,22.4.2,Show Quote ID,Display quote name,Quote data
+My Quotes,Display Quotes,22.4.3,Show Creation Date,Display formatted creation date,Quote data
+My Quotes,Display Quotes,22.4.4,Show Plan Name,Display plan_name,Quote data
+My Quotes,Display Quotes,22.4.5,Show Monthly Price,Display final_monthly_price,Quote data
+My Quotes,Display Quotes,22.4.6,Show Status Badge,Display status with color coding,Quote data
+My Quotes,Display Quotes,22.4.7,View Button,Navigate to /customer/quote/view?quote_id={name},Navigation
+My Quotes,Display Quotes,22.4.8,Pay Now Button,Show if status=Sent and payment_status=Pending,UI button
+My Quotes,Display Quotes,22.4.9,Empty State,Show No quotes found with Request New Quote button,UI empty state
+My Quotes,Empty State,22.5.1,Request Quote Button,Navigate to /customer/subscription,Navigation
+,,,,,
+QUOTE VIEW button (Page),,,,,
+,,,,,
+Quote View,Page Access,23.1.2,Get Quote ID,Extract quote_id parameter from URL,URL params
+Quote View,Page Access,23.1.3,Validate Quote ID,Check if quote_id provided,Validation
+Quote View,Page Header,23.2.1,Back Button,Navigate to /customer/quote/my-quotes,Navigation
+Quote View,Page Header,23.2.2,Display Title,Show Quote Details heading,UI display
+Quote View,Page Header,23.2.3,Display Subtitle,Show Review your subscription quote,UI display
+Quote View,Load Quote,23.3.1,Fetch Quote,Call frappe.client.get for SubscriptionQuote,frappe.client.get
+,,,,,
+Quote View,Quote Header,23.4.1,Display Quote ID,Show Quote #{quote_id},Quote data
+Quote View,Quote Header,23.4.2,Display Generation Date,Show formatted generated_date,Quote data
+Quote View,Quote Header,23.4.3,Display Status Badge,Show status with color coding,Quote data
+Quote View,Plan Details,23.5.1,Display Plan Name,Show product_plan,Quote data
+Quote View,Plan Details,23.5.2,Display Vehicle Count,Show total_vehicles,Quote data
+Quote View,Plan Details,23.5.3,Display Washes Per Month,Show washes_per_month,Quote data
+Quote View,Pricing Breakdown,23.6.1,Display Base Price,Show base_price,Quote data
+Quote View,Pricing Breakdown,23.6.2,Display Vehicle Surcharge,Show vehicle_surcharge_amount if > 0,Quote data
+Quote View,Pricing Breakdown,23.6.3,Display Distance Markup,Show distance_markup_amount if > 0,Quote data
+Quote View,Pricing Breakdown,23.6.4,Display Time Markup,Show time_markup_amount if > 0,Quote data
+Quote View,Pricing Breakdown,23.6.5,Display Amenity Charges,Show amenities_fees,Quote data
+Quote View,Pricing Breakdown,23.6.6,Display Subtotal Before Discount,Show subtotal_before_discount,Quote data
+Quote View,Pricing Breakdown,23.6.7,Display Discount,Show discount_amount if > 0,Quote data
+Quote View,Pricing Breakdown,23.6.8,Display Final Price,Show final_monthly_price in large text,Quote data
+Quote View,Payment Section,23.7.1,Show Payment Section,Display if status=Sent and payment_status=Pending,UI conditional
+Quote View,Payment Section,23.7.2,Display Ready Message,Show Ready to Subscribe? heading,UI display
+Quote View,Payment Section,23.7.3,Proceed to Payment Button,Call subscription_payment.accept_quote_and_pay,subscription_payment.accept_quote_and_pay
+Quote View,Subscription Created,23.8.4,View Subscription Button,Navigate to /customer/subscription/my-subscription?subscription_id={id},Navigation
+,,,,,
+,,,,,
+Yet to finish these below  pages  ,,,,,
+MANAGE SUBSCRIPTIONS PAGE,,,,,
+,,,,,
+Manage Subscriptions,Page Header,24.2.1,Back Button,Navigate to /customer/dashboard,Navigation
+Manage Subscriptions,Page Header,24.2.2,Display Title,Show Manage Subscriptions heading,UI display
+Manage Subscriptions,Page Header,24.2.3,Display Subtitle,Show View and manage all your subscriptions and quotes,UI display
+Manage Subscriptions,Load Data,24.3.1,Fetch Subscriptions,Call subscription_flow_api.get_customer_subscriptions,subscription_flow_api.get_customer_subscriptions
+Manage Subscriptions,Load Data,24.3.2,Fetch Quotes,Call subscription_flow_api.get_customer_quotes,subscription_flow_api.get_customer_quotes
+Manage Subscriptions,Active Subscriptions,24.4.3,Create Subscription Cards,Display each active subscription as card,UI cards
+Manage Subscriptions,Active Subscriptions,24.4.4,Show Plan Name,Display plan_name,Subscription data
+Manage Subscriptions,Active Subscriptions,24.4.5,Show Status Badge,Display status badge,Subscription data
+Manage Subscriptions,Active Subscriptions,24.4.6,Show Washes Left,Display total_available_washes / allocated_washes,Subscription data
+Manage Subscriptions,Active Subscriptions,24.4.7,Show Monthly Price,Display monthly_total,Subscription data
+Manage Subscriptions,Active Subscriptions,24.4.8,Show Valid Until,Display formatted end_date,Subscription data
+Manage Subscriptions,Active Subscriptions,24.4.9,View Details Button,Navigate to /customer/subscription/my-subscription?subscription_id={name},Navigation
+Manage Subscriptions,Active Subscriptions,24.4.10,Book Wash Button,Navigate to /customer/subscription/book-wash?subscription_id={name},Navigation
+Manage Subscriptions,Active Subscriptions,24.4.11,Empty State,Show No active subscriptions with Browse Plans button,UI empty state
+Manage Subscriptions,Pending Quotes,24.5.1,Display Section Header,Show Pending Quotes heading,UI display
+Manage Subscriptions,Pending Quotes,24.5.2,Filter Pending,Filter quotes with status in Draft/Sent/Viewed,Client-side filter
+Manage Subscriptions,Pending Quotes,24.5.3,Create Quote Cards,Display each pending quote as card,UI cards
+Manage Subscriptions,Pending Quotes,24.5.4,Show Plan Name,Display plan_name,Quote data
+Manage Subscriptions,Pending Quotes,24.5.5,Show Status Badge,Display status badge,Quote data
+Manage Subscriptions,Pending Quotes,24.5.6,Show Estimated Price,Display final_monthly_price,Quote data
+Manage Subscriptions,Pending Quotes,24.5.7,Show Submitted Date,Display formatted creation date,Quote data
+Manage Subscriptions,Pending Quotes,24.5.8,Show Payment Status,Display payment_status,Quote data
+Manage Subscriptions,Pending Quotes,24.5.9,View Quote Button,Navigate to /customer/quote/view?quote_id={name},Navigation
+Manage Subscriptions,Pending Quotes,24.5.10,Empty State,Show No pending quotes with View All Quotes button,UI empty state
+Manage Subscriptions,Past Subscriptions,24.6.1,Display Section Header,Show Past Subscriptions heading,UI display
+Manage Subscriptions,Past Subscriptions,24.6.2,Filter Past,Filter subscriptions with status in Suspended/Cancelled/Expired,Client-side filter
+Manage Subscriptions,Past Subscriptions,24.6.3,Create Subscription Cards,Display each past subscription as card,UI cards
+Manage Subscriptions,Past Subscriptions,24.6.4,Show Details,Display same fields as active subscriptions,Subscription data
+Manage Subscriptions,Past Subscriptions,24.6.5,View Details Button,Navigate to /customer/subscription/my-subscription?subscription_id={name},Navigation
+Manage Subscriptions,Past Subscriptions,24.6.6,Empty State,Show No past subscriptions message,UI empty state
+,,,,,
+MY SUBSCRIPTION PAGE,,,,,
+My Subscription,Page Access,25.1.1,Authentication Check,Redirect to /login if user is Guest,Session management
+My Subscription,Page Access,25.1.2,Get Subscription ID,Extract subscription_id parameter from URL,URL params
+My Subscription,Page Access,25.1.3,Validate Subscription ID,Check if subscription_id provided,Validation
+My Subscription,Page Header,25.2.1,Back Button,Navigate to /customer/dashboard,Navigation
+My Subscription,Page Header,25.2.2,Display Title,Show My Subscription heading,UI display
+My Subscription,Page Header,25.2.3,Display Subtitle,Show Manage your subscription and book washes,UI display
+My Subscription,Load Subscription,25.3.1,Fetch Details,Call subscription_flow_api.get_subscription_details,subscription_flow_api.get_subscription_details
+My Subscription,Load Subscription,25.3.2,Display Loading,Show spinner while fetching,UI loading state
+My Subscription,Status Alert,25.4.1,Check Status,Evaluate subscription.status,Subscription data
+My Subscription,Status Alert,25.4.2,Show Suspended Alert,Display warning if status=Suspended,UI alert
+My Subscription,Status Alert,25.4.3,Show Cancelled Alert,Display danger alert if status=Cancelled,UI alert
+My Subscription,Status Alert,25.4.4,Show Expired Alert,Display warning if status=Expired,UI alert
+My Subscription,Overview Card,25.5.1,Display Plan Name,Show plan_name,Subscription data
+My Subscription,Overview Card,25.5.2,Display Subscription ID,Show subscription name,Subscription data
+My Subscription,Overview Card,25.5.3,Display Status Badge,Show status with color coding,Subscription data
+My Subscription,Overview Card,25.5.4,Display Washes Used,Show used_washes_current_month,Subscription data
+My Subscription,Overview Card,25.5.5,Display Total Washes,Show washes_per_month,Subscription data
+My Subscription,Overview Card,25.5.6,Display Progress Bar,Show visual progress of washes used,UI progress bar
+My Subscription,Overview Card,25.5.7,Display Per Wash Cost,Calculate monthly_total / washes_per_month,Calculated value
+My Subscription,Overview Card,25.5.8,Display Monthly Price,Show monthly_total,Subscription data
+My Subscription,Overview Card,25.5.9,Display Valid Until,Show formatted end_date,Subscription data
+My Subscription,Overview Card,25.5.10,Book Wash Button,Navigate to /customer/subscription/book-wash,Navigation
+My Subscription,Overview Card,25.5.11,Bulk Book Button,Navigate to /customer/bulk-booking,Navigation
+My Subscription,Overview Card,25.5.12,View Ledger Button,Navigate to /customer/subscription/ledger,Navigation
+My Subscription,Overview Card,25.5.13,Disable Buttons,Disable if status != Active,UI state
+My Subscription,Included Services,25.6.1,Display Section Header,Show Included Services in Your Plan heading,UI display
+My Subscription,Included Services,25.6.2,Display Exterior Header,Show EXTERIOR Services subheading,UI display
+My Subscription,Included Services,25.6.3,List Exterior Services,Display services with service_section=EXTERIOR,Subscription.services
+My Subscription,Included Services,25.6.4,Display Interior Header,Show INTERIOR Services subheading,UI display
+My Subscription,Included Services,25.6.5,List Interior Services,Display services with service_section=INTERIOR,Subscription.services
+My Subscription,Included Services,25.6.6,Show Service Name,Display addon_name,Service data
+My Subscription,Included Services,25.6.7,Show Service Quantity,Display quantity available,Service data
+My Subscription,Vehicles Section,25.7.1,Display Section Header,Show Your Vehicles heading,UI display
+My Subscription,Vehicles Section,25.7.2,List Vehicles,Display all subscription vehicles,Subscription.vehicles
+My Subscription,Vehicles Section,25.7.3,Show Vehicle Number,Display vehicle_number,Vehicle data
+My Subscription,Vehicles Section,25.7.4,Show Vehicle Type,Display vehicle_type,Vehicle data
+My Subscription,Wash History,25.8.1,Display Section Header,Show Wash Usage History heading,UI display
+My Subscription,Wash History,25.8.2,Fetch History,Call fix_subscription_booking_logic.get_subscription_wash_history,fix_subscription_booking_logic.get_subscription_wash_history
+My Subscription,Wash History,25.8.3,Create History Table,Display table with Wash#/Date/Services/Add-ons/Amount/Status,UI table
+My Subscription,Wash History,25.8.4,List Washes,Loop through wash_history and display rows,Wash history data
+My Subscription,Wash History,25.8.5,Show Wash Number,Display wash_number,Wash data
+My Subscription,Wash History,25.8.6,Show Date,Display formatted booking_date,Wash data
+My Subscription,Wash History,25.8.7,Show Services Used,Display services_used,Wash data
+My Subscription,Wash History,25.8.8,Show Add-ons,Display addons_purchased,Wash data
+My Subscription,Wash History,25.8.9,Show Amount Paid,Display addon_amount_paid,Wash data
+My Subscription,Wash History,25.8.10,Show Status Badge,Display status with color coding,Wash data
+My Subscription,Wash History,25.8.11,Empty State,Show No washes booked yet message,UI empty state
+My Subscription,Details Section,25.9.1,Display Section Header,Show Subscription Details heading,UI display
+My Subscription,Details Section,25.9.2,Display Preferred Days,Show preferred_days,Subscription data
+My Subscription,Details Section,25.9.3,Display Preferred Time,Show preferred_time,Subscription data
+My Subscription,Details Section,25.9.4,Display Electricity Status,Show electricity_provided,Subscription data
+My Subscription,Details Section,25.9.5,Display Water Status,Show water_provided,Subscription data
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+BOOK WASH PAGE,,,,,
+Book Wash,Page Access,26.1.1,Authentication Check,Redirect to /login if user is Guest,Session management
+Book Wash,Page Access,26.1.2,Get Subscription ID,Extract subscription_id parameter from URL,URL params
+Book Wash,Page Access,26.1.3,Validate Subscription ID,Check if subscription_id provided,Validation
+Book Wash,Page Header,26.2.1,Back Button,Navigate back using history.back(),Navigation
+Book Wash,Page Header,26.2.2,Bulk Book Button,Navigate to /customer/bulk-booking,Navigation
+Book Wash,Page Header,26.2.3,Display Title,Show Book Your Wash heading,UI display
+Book Wash,Page Header,26.2.4,Display Subtitle,Show Select services and schedule your wash,UI display
+Book Wash,Load Subscription,26.3.1,Fetch Details,Call subscription_flow_api.get_subscription_details,subscription_flow_api.get_subscription_details
+Book Wash,Load Subscription,26.3.2,Calculate Per Wash Cost,Calculate monthly_total / washes_per_month,Calculated value
+Book Wash,Load Subscription,26.3.3,Display Services,Populate included services sections,Subscription.services
+Book Wash,Load Subscription,26.3.4,Display Vehicles,Populate vehicle selection,Subscription.vehicles
+Book Wash,Load Subscription,26.3.5,Display Preferences,Show preferred_days and preferred_time,Subscription data
+Book Wash,Service Preferences,26.4.1,Load Preferences,Call service_preferences.get_customer_service_preferences,service_preferences.get_customer_service_preferences
+Book Wash,Service Preferences,26.4.2,Use Previous Button,Show button to apply previous selections,UI button
+Book Wash,Service Preferences,26.4.3,Show Preferences Modal,Display list of previous service combinations,frappe.prompt
+Book Wash,Service Preferences,26.4.4,Apply Selection,Pre-select services based on chosen preference,Client-side selection
+Book Wash,Included Services,26.5.1,Display Exterior Header,Show EXTERIOR Services heading,UI display
+Book Wash,Included Services,26.5.2,Display Exterior Cards,Show service cards for EXTERIOR services,UI cards
+Book Wash,Included Services,26.5.3,Display Interior Header,Show INTERIOR Services heading,UI display
+Book Wash,Included Services,26.5.4,Display Interior Cards,Show service cards for INTERIOR services,UI cards
+Book Wash,Included Services,26.5.5,Show Service Name,Display addon_name,Service data
+Book Wash,Included Services,26.5.6,Show Included Badge,Display Included in plan (₹0),UI badge
+Book Wash,Included Services,26.5.7,Show Quantity,Display quantity available,Service data
+Book Wash,Included Services,26.5.8,Toggle Selection,Add/remove service from selectedIncludedServices,Client-side state
+Book Wash,Included Services,26.5.9,Visual Feedback,Highlight selected cards with blue border,CSS styling
+Book Wash,Optional Add-ons,26.6.1,Display Section Header,Show Optional Add-ons heading,UI display
+Book Wash,Optional Add-ons,26.6.2,Fetch Add-ons,Call subscription_flow_api.get_plan_optional_addons,subscription_flow_api.get_plan_optional_addons
+Book Wash,Optional Add-ons,26.6.3,Display Add-on Cards,Show each add-on with name and price,UI cards
+Book Wash,Optional Add-ons,26.6.4,Show Add-on Name,Display addon_name,Add-on data
+Book Wash,Optional Add-ons,26.6.5,Show Add-on Price,Display unit_price with +₹ prefix,Add-on data
+Book Wash,Optional Add-ons,26.6.6,Toggle Selection,Add/remove add-on from selectedOptionalAddons,Client-side state
+Book Wash,Optional Add-ons,26.6.7,Visual Feedback,Highlight selected cards with orange border,CSS styling
+Book Wash,Date Selection,26.7.1,Display Calendar Header,Show Select Date heading,UI display
+Book Wash,Date Selection,26.7.2,Display Preferences Info,Show preferred days and time,Subscription data
+Book Wash,Date Selection,26.7.3,Render Calendar,Display current month calendar grid,JavaScript Date
+Book Wash,Date Selection,26.7.4,Month Navigation,Show previous/next month buttons,UI buttons
+Book Wash,Date Selection,26.7.5,Disable Past Dates,Mark dates before today as disabled,Date validation
+Book Wash,Date Selection,26.7.6,Highlight Preferred Days,Mark preferred days with green border,CSS styling
+Book Wash,Date Selection,26.7.7,Select Date,Store selected date in sessionStorage,Client-side state
+Book Wash,Date Selection,26.7.8,Visual Feedback,Highlight selected date with blue background,CSS styling
+Book Wash,Date Selection,26.7.9,Clear Date Button,Show button to clear date selection,UI button
+Book Wash,Time Slot Selection,26.8.1,Display Section Header,Show Available Time Slots heading,UI display
+Book Wash,Time Slot Selection,26.8.2,Fetch Slots,Call booking.get_available_slots with selected date,booking.get_available_slots
+Book Wash,Time Slot Selection,26.8.3,Display Slot Cards,Show each slot with time and capacity,UI cards
+Book Wash,Time Slot Selection,26.8.4,Show Time,Display formatted start_time,Slot data
+Book Wash,Time Slot Selection,26.8.5,Show Capacity,Display available_capacity,Slot data
+Book Wash,Time Slot Selection,26.8.6,Disable Full Slots,Mark slots with capacity=0 as disabled,Slot validation
+Book Wash,Time Slot Selection,26.8.7,Select Slot,Store selected slot_id and time,Client-side state
+Book Wash,Time Slot Selection,26.8.8,Visual Feedback,Highlight selected slot with blue background,CSS styling
+Book Wash,Vehicle Selection,26.9.1,Display Section Header,Show Select Vehicle heading,UI display
+Book Wash,Vehicle Selection,26.9.2,Display Vehicle Cards,Show each vehicle with radio button,UI cards
+Book Wash,Vehicle Selection,26.9.3,Show Vehicle Number,Display vehicle_number,Vehicle data
+Book Wash,Vehicle Selection,26.9.4,Show Vehicle Type,Display vehicle_type,Vehicle data
+Book Wash,Vehicle Selection,26.9.5,Select Vehicle,Store selected vehicle_number,Client-side state
+Book Wash,Price Summary,26.10.1,Display Summary Card,Show sticky price summary card,UI card
+Book Wash,Price Summary,26.10.2,Display Included Price,Show per wash cost,Calculated value
+Book Wash,Price Summary,26.10.3,Display Add-on Price,Sum selected optional add-on prices,Calculated value
+Book Wash,Price Summary,26.10.4,Display Total,Show total to pay (add-ons only),Calculated value
+Book Wash,Price Summary,26.10.5,Confirm Button,Enable when all selections made,UI button
+Book Wash,Price Summary,26.10.6,Payment History Link,Navigate to /customer/booking/payment-history,Navigation
+Book Wash,Confirm Booking,26.11.1,Validate Selections,Check service/date/slot/vehicle selected,Form validation
+Book Wash,Confirm Booking,26.11.2,Show Payment Confirmation,Display modal if add-ons > 0,frappe.confirm
+Book Wash,Confirm Booking,26.11.3,Create Booking,Call wash_booking_enhanced.create_wash_booking,wash_booking_enhanced.create_wash_booking
+Book Wash,Confirm Booking,26.11.4,Show Success,Display success message with wash number,frappe.msgprint
+Book Wash,Confirm Booking,26.11.5,Show Booking Details,Display booking_id and washes remaining,Success data
+Book Wash,Confirm Booking,26.11.6,Redirect,Navigate to /customer/booking/payment-history after 3 seconds,Navigation
+Book Wash,Confirm Booking,26.11.7,Handle Error,Display error message,frappe.msgprint
+,,,,,
+BULK BOOKING PAGE,,,,,
+Bulk Booking,Page Access,27.1.1,Authentication Check,Redirect to /login if user is Guest,Session management
+Bulk Booking,Page Access,27.1.2,Get Subscription ID,Extract subscription_id parameter from URL,URL params
+Bulk Booking,Page Access,27.1.3,Validate Subscription ID,Check if subscription_id provided,Validation
+Bulk Booking,Page Header,27.2.1,Display Title,Show Bulk Book Your Washes heading,UI display
+Bulk Booking,Page Header,27.2.2,Display Subtitle,Show Schedule your entire month in just a few clicks,UI display
+Bulk Booking,Stepper,27.3.1,Display Step 1,Show Allowance step as active,UI stepper
+Bulk Booking,Stepper,27.3.2,Display Step 2,Show Schedule step,UI stepper
+Bulk Booking,Stepper,27.3.3,Display Step 3,Show Confirm step,UI stepper
+Bulk Booking,Stepper,27.3.4,Update Active Step,Highlight current step,CSS styling
+Bulk Booking,Stepper,27.3.5,Mark Completed Steps,Show checkmark for completed steps,CSS styling
+Bulk Booking,Step 1 Allowance,27.4.1,Fetch Allowance,Call bulk_booking_api.get_service_allowance,bulk_booking_api.get_service_allowance
+Bulk Booking,Step 1 Allowance,27.4.2,Display Washes Remaining,Show total washes available,Allowance data
+Bulk Booking,Step 1 Allowance,27.4.3,Display Service Cards,Show each service with remaining credits,UI cards
+Bulk Booking,Step 1 Allowance,27.4.4,Show Service Icon,Display emoji icon based on service type,UI display
+Bulk Booking,Step 1 Allowance,27.4.5,Show Service Name,Display addon_name,Service data
+Bulk Booking,Step 1 Allowance,27.4.6,Show Credits,Display remaining quantity,Service data
+Bulk Booking,Step 1 Allowance,27.4.7,Display Preferences,Show preferred_days and preferred_slot,Allowance data
+Bulk Booking,Step 1 Allowance,27.4.8,Start Scheduling Button,Navigate to Step 2,Navigation
+Bulk Booking,Step 2 Schedule,27.5.1,Initialize Config,Create empty bookingsConfig array,Client-side state
+Bulk Booking,Step 2 Schedule,27.5.2,Fetch Suggestions,Call bulk_booking_api.get_suggested_schedule,bulk_booking_api.get_suggested_schedule
+Bulk Booking,Step 2 Schedule,27.5.3,Pre-fill Dates,Apply suggested dates to bookingsConfig,Client-side state
+Bulk Booking,Step 2 Schedule,27.5.4,Load Vehicles,Fetch subscription vehicles,subscription_flow_api.get_subscription_details
+Bulk Booking,Step 2 Schedule,27.5.5,Display Wash Counter,Show Wash X of Y,UI display
+Bulk Booking,Step 2 Schedule,27.5.6,Previous Wash Button,Navigate to previous wash configuration,Navigation
+Bulk Booking,Step 2 Schedule,27.5.7,Next Wash Button,Navigate to next wash configuration,Navigation
+Bulk Booking,Step 2 Schedule,27.5.8,Disable Navigation,Disable prev on first wash and next on last,UI state
+Bulk Booking,Calendar Display,27.6.1,Render Calendar,Display month calendar with navigation,JavaScript Date
+Bulk Booking,Calendar Display,27.6.2,Month Navigation,Show prev/next month buttons,UI buttons
+Bulk Booking,Calendar Display,27.6.3,Fetch Availability,Call bulk_booking_api.get_calendar_availability,bulk_booking_api.get_calendar_availability
+Bulk Booking,Calendar Display,27.6.4,Mark Available Days,Highlight days with available slots in green,CSS styling
+Bulk Booking,Calendar Display,27.6.5,Disable Past Dates,Mark dates before today as disabled,Date validation
+Bulk Booking,Calendar Display,27.6.6,Show Wash Badges,Display W1 W2 badges on selected dates,UI badges
+Bulk Booking,Calendar Display,27.6.7,Edit Wash Badge,Click badge to edit that wash configuration,Event handler
+Bulk Booking,Calendar Display,27.6.8,Select Date,Store date in bookingsConfig[currentWashIndex],Client-side state
+Bulk Booking,Calendar Display,27.6.9,Clear Date Button,Clear selected date and time,UI button
+Bulk Booking,Time Slot Display,27.7.1,Fetch Slots,Call booking.get_available_slots for selected date,booking.get_available_slots
+Bulk Booking,Time Slot Display,27.7.2,Display Slot Pills,Show time slots in grid,UI pills
+Bulk Booking,Time Slot Display,27.7.3,Show Time,Display formatted start_time,Slot data
+Bulk Booking,Time Slot Display,27.7.4,Disable Full Slots,Mark slots with capacity=0 as disabled,Slot validation
+Bulk Booking,Time Slot Display,27.7.5,Select Slot,Store time in bookingsConfig[currentWashIndex],Client-side state
+Bulk Booking,Service Selection,27.8.1,Display Service Grid,Show available services with remaining credits,UI grid
+Bulk Booking,Service Selection,27.8.2,Calculate Availability,Subtract services used by other washes,Client-side calculation
+Bulk Booking,Service Selection,27.8.3,Group by Category,Show EXTERIOR/INTERIOR/Add-ons sections,UI sections
+Bulk Booking,Service Selection,27.8.4,Display Service Cards,Show each service with available count,UI cards
+Bulk Booking,Service Selection,27.8.5,Disable Exhausted,Disable services with 0 remaining,UI state
+Bulk Booking,Service Selection,27.8.6,Toggle Service,Add/remove from selected_services,Client-side state
+Bulk Booking,Validation,27.9.1,Validate Date,Check date selected for current wash,Form validation
+Bulk Booking,Validation,27.9.2,Validate Time,Check time slot selected,Form validation
+Bulk Booking,Validation,27.9.3,Validate Past Date,Prevent booking on past dates,Date validation
+Bulk Booking,Validation,27.9.4,Validate Gap,Check min_gap_days between consecutive washes,Date validation
+Bulk Booking,Validation,27.9.5,Show Gap Error,Display error with minimum gap requirement,frappe.msgprint
+Bulk Booking,Step 3 Summary,27.10.1,Display Summary Cards,Show each wash configuration,UI cards
+Bulk Booking,Step 3 Summary,27.10.2,Show Wash Number,Display Wash #X,Summary data
+Bulk Booking,Step 3 Summary,27.10.3,Show Date,Display booking date,Summary data
+Bulk Booking,Step 3 Summary,27.10.4,Show Time,Display formatted time slot,Summary data
+Bulk Booking,Step 3 Summary,27.10.5,Show Services Count,Display number of services selected,Summary data
+Bulk Booking,Step 3 Summary,27.10.6,Show Service Names,List selected service names,Summary data
+Bulk Booking,Step 3 Summary,27.10.7,Back Button,Navigate to Step 2,Navigation
+Bulk Booking,Step 3 Summary,27.10.8,Confirm All Button,Submit all bookings,UI button
+Bulk Booking,Confirm Bookings,27.11.1,Validate All Washes,Check all washes have date and time,Form validation
+Bulk Booking,Confirm Bookings,27.11.2,Show Validation Error,Display error for incomplete wash,frappe.msgprint
+Bulk Booking,Confirm Bookings,27.11.3,Redirect to Invalid,Navigate to incomplete wash configuration,Navigation
+Bulk Booking,Confirm Bookings,27.11.4,Create Bookings,Call bulk_booking_api.create_bulk_bookings,bulk_booking_api.create_bulk_bookings
+Bulk Booking,Confirm Bookings,27.11.5,Show Processing,Display spinner during creation,UI loading state
+Bulk Booking,Confirm Bookings,27.11.6,Show Success,Display success message,frappe.msgprint
+Bulk Booking,Confirm Bookings,27.11.7,Redirect,Navigate to /customer/bookings after 2 seconds,Navigation
+Bulk Booking,Confirm Bookings,27.11.8,Handle Error,Display error message and re-enable button,frappe.msgprint

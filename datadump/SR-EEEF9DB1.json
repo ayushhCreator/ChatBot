@@ -1,0 +1,36 @@
+{
+  "service_request_id": "SR-EEEF9DB1",
+  "conversation_id": "phase2_reschedule_20251130_144427",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:46:34.590308",
+  "customer": {
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "phone": "7654321098"
+  },
+  "vehicle": {
+    "phone": "7654321098",
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "brand": "Ford",
+    "model": "EcoSport",
+    "plate": "7654321098"
+  },
+  "appointment": {
+    "vehicle_brand": "Ford",
+    "vehicle_model": "EcoSport",
+    "vehicle_plate": "7654321098",
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "phone": "7654321098",
+    "date": "2025-11-30"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

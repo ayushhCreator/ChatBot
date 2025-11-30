@@ -1,0 +1,25 @@
+{
+  "service_request_id": "SR-3001DBF5",
+  "conversation_id": "phase2_reschedule_20251130_144427",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:46:56.515848",
+  "customer": {
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "phone": "7654321098"
+  },
+  "vehicle": {
+    "brand": "Ford",
+    "model": "EcoSport",
+    "plate": "7654321098"
+  },
+  "appointment": {
+    "date": "2025-12-03"
+  },
+  "metadata": {
+    "completeness": 50.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

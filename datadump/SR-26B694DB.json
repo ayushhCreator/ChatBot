@@ -1,0 +1,36 @@
+{
+  "service_request_id": "SR-26B694DB",
+  "conversation_id": "phase2_negotiation_20251130_135658",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:00:00.922197",
+  "customer": {
+    "first_name": "Arjun",
+    "last_name": "Patel",
+    "full_name": "Arjun Patel",
+    "phone": "8888777766"
+  },
+  "vehicle": {
+    "phone": "8888777766",
+    "first_name": "Arjun",
+    "last_name": "Patel",
+    "full_name": "Arjun Patel",
+    "brand": "Hyundai",
+    "model": "Creta",
+    "plate": "8888777766"
+  },
+  "appointment": {
+    "vehicle_brand": "Hyundai",
+    "vehicle_model": "Creta",
+    "vehicle_plate": "8888777766",
+    "first_name": "Arjun",
+    "last_name": "Patel",
+    "full_name": "Arjun Patel",
+    "phone": "8888777766",
+    "date": "2025-12-06"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

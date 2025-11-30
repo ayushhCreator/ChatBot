@@ -1,0 +1,37 @@
+{
+  "service_request_id": "SR-9B5A19D0",
+  "conversation_id": "phase2_error_recovery_20251130_140320",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:05:00.194577",
+  "customer": {
+    "first_name": "Sneha",
+    "last_name": "Reddy",
+    "full_name": "Sneha Reddy",
+    "phone": "8888777766"
+  },
+  "vehicle": {
+    "phone": "8888777766",
+    "appointment_date": "2025-11-30",
+    "first_name": "Sneha",
+    "last_name": "Reddy",
+    "full_name": "Sneha Reddy",
+    "brand": "Ford",
+    "model": "EcoSport",
+    "plate": "MH14ST7890"
+  },
+  "appointment": {
+    "date": "2025-11-30",
+    "vehicle_brand": "Ford",
+    "vehicle_model": "EcoSport",
+    "vehicle_plate": "MH14ST7890",
+    "first_name": "Sneha",
+    "last_name": "Reddy",
+    "full_name": "Sneha Reddy",
+    "phone": "8888777766"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

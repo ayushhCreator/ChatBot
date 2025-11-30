@@ -1,0 +1,200 @@
+Page,Section,Rq_No,Function_name,Function description,Integration(If any),Extra1,Extra2,Extra3,Extra4,Extra5,Extra6
+Configuration,,,,,
+Config Module,Conversation States,1.1.1,ConversationState Enum,Define all possible conversation states in the chatbot,State machine management
+Config Module,Default Settings,1.2.1,DEFAULT_SETTINGS,Configuration object with default bot settings,Global configuration
+Config Module,Working Hours,1.3.1,WORKING_HOURS,Define working hours for the chatbot,Time-based restrictions
+Config Module,Booking Settings,1.4.1,BOOKING_CONFIG,Configuration for booking flow parameters,Booking flow management
+Config Module,Service Types,1.5.1,SERVICE_TYPES,Define available service types for the chatbot,Service selection
+,,,,,
+,,,,,
+Models,,,,,
+Pydantic Models,Validation Models,2.1.1,ValidatedCustomer,Pydantic model for validated customer data,Data validation
+Pydantic Models,Validation Models,2.1.2,ValidatedVehicle,Pydantic model for validated vehicle data,Data validation
+Pydantic Models,Validation Models,2.1.3,ValidatedAppointment,Pydantic model for validated appointment data,Data validation
+Pydantic Models,Validation Models,2.1.4,ValidatedSentimentScores,Pydantic model for validated sentiment scores,Data validation
+Pydantic Models,Validation Models,2.1.5,ValidatedIntent,Pydantic model for validated intent classification,Data validation
+Pydantic Models,Validation Models,2.1.6,ValidatedConversationContext,Pydantic model for validated conversation context,Data validation
+Pydantic Models,Validation Models,2.1.7,ExtractionMetadata,Pydantic model for extraction metadata,Data validation
+Pydantic Models,Validation Models,2.1.8,ValidatedServiceRequest,Pydantic model for validated service request,Data validation
+,,,,,
+,,,,,
+DSPy Signatures,Signature Definitions,3.1.1,SentimentAnalysisSignature,Signature for sentiment analysis task,LLM interaction
+DSPy Signatures,Signature Definitions,3.1.2,NameExtractionSignature,Signature for name extraction task,LLM interaction
+DSPy Signatures,Signature Definitions,3.1.3,VehicleExtractionSignature,Signature for vehicle extraction task,LLM interaction
+DSPy Signatures,Signature Definitions,3.1.4,IntentClassificationSignature,Signature for intent classification task,LLM interaction
+DSPy Signatures,Signature Definitions,3.1.5,DateExtractionSignature,Signature for date extraction task,LLM interaction
+DSPy Signatures,Signature Definitions,3.1.6,AppointmentTimeSignature,Signature for appointment time extraction,LLM interaction
+DSPy Signatures,Signature Definitions,3.1.7,TypoDetectionSignature,Signature for typo detection,LLM interaction
+DSPy Signatures,Signature Definitions,3.1.8,ConfirmationSignature,Signature for confirmation generation,LLM interaction
+,,,,,
+,,,,,
+DSPy Modules,Module Definitions,4.1.1,SentimentAnalyzer,Module for sentiment analysis using DSPy,LLM processing
+DSPy Modules,Module Definitions,4.1.2,NameExtractor,Module for name extraction using DSPy,LLM processing
+DSPy Modules,Module Definitions,4.1.3,VehicleDetailsExtractor,Module for vehicle details extraction using DSPy,LLM processing
+DSPy Modules,Module Definitions,4.1.4,IntentClassifier,Module for intent classification using DSPy,LLM processing
+DSPy Modules,Module Definitions,4.1.5,DateParser,Module for date parsing using DSPy,LLM processing
+DSPy Modules,Module Definitions,4.1.6,TimeExtractor,Module for time extraction using DSPy,LLM processing
+DSPy Modules,Module Definitions,4.1.7,TypoDetector,Module for typo detection using DSPy,LLM processing
+DSPy Modules,Module Definitions,4.1.8,ConfirmationGenerator,Module for confirmation generation using DSPy,LLM processing
+,,,,,
+,,,,,
+Data Extraction,Core Extraction,5.1.1,extract_customer_data,Main function to extract customer data using DSPy,LLM extraction process
+Data Extraction,Fallback Functions,5.2.1,extract_name_with_regex,Fallback function for name extraction using regex,Regex extraction
+Data Extraction,Fallback Functions,5.2.2,extract_vehicle_with_regex,Fallback function for vehicle extraction using regex,Regex extraction
+Data Extraction,Fallback Functions,5.2.3,extract_date_with_regex,Fallback function for date extraction using regex,Regex extraction
+Data Extraction,Validation Process,5.3.1,validate_extracted_data,Function to validate extracted data against Pydantic models,Data validation
+Data Extraction,Error Handling,5.4.1,handle_extraction_errors,Function to handle extraction errors gracefully,Error handling
+,,,,,
+,,,,,
+Sentiment Analysis,Analysis Process,6.1.1,analyze_sentiment,Main function to analyze sentiment using DSPy,LLM sentiment processing
+Sentiment Analysis,Score Processing,6.2.1,process_sentiment_scores,Function to process and normalize sentiment scores,Score normalization
+Sentiment Analysis,Threshold Logic,6.3.1,determine_sentiment_response,Function to determine response based on sentiment thresholds,Response logic
+,,,,,
+,,,,,
+History Utilities,History Management,7.1.1,get_default_history,Function to get default conversation history,History initialization
+History Utilities,History Management,7.1.2,create_dspy_history_from_dict,Function to create DSPy history from dictionary,History conversion
+History Utilities,History Management,7.1.3,get_dspy_history_from_conversation,Function to get DSPy history from conversation data,History conversion
+,,,,,
+,,,,,
+Conversation Manager,Conversation State,8.1.1,ConversationManager Class,Class to manage conversation state and history,State management
+Conversation Manager,Data Retrieval,8.2.1,get_conversation_context,Method to retrieve conversation context,Context retrieval
+Conversation Manager,Data Storage,8.3.1,save_conversation_context,Method to save conversation context,Context storage
+Conversation Manager,History Management,8.4.1,update_conversation_history,Method to update conversation history,History updates
+,,,,,
+,,,,,
+Template Management,Template Selection,9.1.1,TemplateManager Class,Class to manage template selection logic,Template management
+Template Management,Response Mode,9.2.1,decide_response_mode,Method to decide between LLM and template response,Response decision
+Template Management,Template Retrieval,9.3.1,get_appropriate_template,Method to retrieve appropriate template,Template selection
+,,,,,
+,,,,,
+Response Composition,Response Building,10.1.1,compose_response,Main function to compose response using LLM and templates,Response generation
+Response Composition,Tone Adjustment,10.2.1,adjust_response_tone,Function to adjust response tone based on sentiment,Response tone adjustment
+Response Composition,Template Integration,10.3.1,integrate_template_response,Function to integrate template into response,Template integration
+,,,,,
+,,,,,
+Retroactive Validation,Validation Process,11.1.1,RetroactiveValidator Class,Class to validate missing data in conversation history,Data validation
+Retroactive Validation,Data Search,11.2.1,scan_history_for_missing_data,Method to scan history for missing data,Data scanning
+Retroactive Validation,Gap Filling,11.3.1,fill_missing_prerequisites,Method to fill missing prerequisites from history,Data filling
+,,,,,
+,,,,,
+Optional Fields Extraction,Enhanced Extraction,12.1.1,extract_optional_fields,Function to extract optional fields beyond required ones,Enhanced extraction
+Optional Fields Extraction,Data Processing,12.2.1,process_optional_vehicle_data,Function to process optional vehicle data,Data processing
+Optional Fields Extraction,Service Enhancement,12.3.1,enhance_service_with_optional_data,Function to enhance service with optional data,Service enhancement
+,,,,,
+,,,,,
+Service Request Dumper,Data Persistence,13.1.1,dump_service_request,Function to dump confirmed service request to file,Data persistence
+Service Request Dumper,File Management,13.2.1,save_to_datadump_folder,Function to save service request to datadump folder,File saving
+Service Request Dumper,JSON Serialization,13.3.1,serialize_service_request,Function to serialize service request to JSON,Data serialization
+,,,,,
+,,,,,
+DSPy Configuration,LLM Setup,14.1.1,configure_dspy,Function to configure DSPy with LLM,LLM configuration
+DSPy Configuration,Model Connection,14.2.1,ensure_configured,Function to ensure DSPy is properly configured,Configuration validation
+DSPy Configuration,Settings Management,14.3.1,DSPy configuration object,Configuration object for DSPy settings,Configuration management
+,,,,,
+,,,,,
+Main Module,API Endpoints,15.1.1,chat endpoint,Main chat endpoint for the FastAPI application,API communication
+Main Module,Application Lifecycle,15.2.1,lifespan event handler,Handler for application startup and shutdown,Application lifecycle
+Main Module,Error Handling,15.3.1,HTTPException handling,Handler for HTTP exceptions,Error handling
+Main Module,Message Processing,15.4.1,process_user_message,Function to process user messages through orchestrator,Message processing
+,,,,,
+,,,,,
+Orchestrator Package,,,,,
+Extraction Coordinator,Data Extraction,16.1.1,ExtractionCoordinator Class,Coordinate extraction of user data (name, phone, vehicle, date, intent, typos),Extraction coordination
+Extraction Coordinator,Data Extraction,16.1.2,extract_and_validate,Method to extract and validate all data types,Data extraction
+Extraction Coordinator,Data Extraction,16.1.3,extract_name,Method to extract name with validation,Data extraction
+Extraction Coordinator,Data Extraction,16.1.4,extract_vehicle,Method to extract vehicle details with validation,Data extraction
+Extraction Coordinator,Data Extraction,16.1.5,extract_appointment_date,Method to extract appointment date with validation,Data extraction
+Extraction Coordinator,Data Extraction,16.1.6,extract_intent,Method to extract user intent,Data extraction
+Extraction Coordinator,Data Extraction,16.1.7,extract_typo_corrections,Method to extract and handle typos,Data extraction
+Extraction Coordinator,Error Handling,16.2.1,handle_extraction_error,Method to handle extraction errors gracefully,Error handling
+,,,,,
+State Coordinator,State Management,17.1.1,StateCoordinator Class,Coordinate conversation state transitions based on extracted data,State machine management
+State Coordinator,State Management,17.1.2,determine_next_state,Method to determine the next conversation state,State transition logic
+State Coordinator,State Management,17.1.3,is_conversation_complete,Method to check if conversation is complete,State validation
+State Coordinator,State Management,17.1.4,handle_state_transition,Method to handle specific state transitions,State transition logic
+State Coordinator,Sentiment Integration,17.2.1,apply_sentiment_logic,Method to apply sentiment-based state logic,Sentiment integration
+State Coordinator,Intent Integration,17.3.1,apply_intent_logic,Method to apply intent-based state logic,Intent integration
+,,,,,
+Scratchpad Coordinator,Scratchpad Management,18.1.1,ScratchpadCoordinator Class,Manage scratchpad updates during data collection,Scratchpad management
+Scratchpad Coordinator,Data Updates,18.2.1,update_scratchpad,Method to update scratchpad with new data,Data updates
+Scratchpad Coordinator,Data Updates,18.2.2,update_customer_data,Method to update customer data in scratchpad,Data updates
+Scratchpad Coordinator,Data Updates,18.2.3,update_vehicle_data,Method to update vehicle data in scratchpad,Data updates
+Scratchpad Coordinator,Data Updates,18.2.4,update_appointment_data,Method to update appointment data in scratchpad,Data updates
+Scratchpad Coordinator,Validation,18.3.1,validate_scratchpad_integrity,Method to validate scratchpad integrity,Data validation
+Scratchpad Coordinator,Overwrite Protection,18.4.1,protect_required_fields,Method to protect required fields from overwrite,Data protection
+,,,,,
+Message Processor,Message Handling,19.1.1,MessageProcessor Class,Main orchestrator coordinating all chatbot components,Message coordination
+Message Processor,Message Handling,19.1.2,process_message,Main method to process incoming messages,Message processing
+Message Processor,Component Coordination,19.2.1,coordinate_extraction,Method to coordinate extraction process,Component coordination
+Message Processor,Component Coordination,19.2.2,coordinate_state_transition,Method to coordinate state transitions,Component coordination
+Message Processor,Component Coordination,19.2.3,coordinate_scratchpad_update,Method to coordinate scratchpad updates,Component coordination
+Message Processor,Response Generation,19.3.1,generate_response,Method to generate appropriate response,Response generation
+Message Processor,Integration,19.4.1,handle_confirmation_mode,Method to handle confirmation mode processing,Confirmation integration
+,,,,,
+,,,,,
+Booking Package,,,,,
+Scratchpad Module,Data Management,20.1.1,ScratchpadManager Class,Single source of truth for collected booking data,Data management
+Scratchpad Module,Data Management,20.1.2,create_scratchpad,Method to create new scratchpad instance,Data initialization
+Scratchpad Module,Data Management,20.1.3,update_field,Method to update a field in scratchpad,Data updates
+Scratchpad Module,Data Management,20.1.4,get_field,Method to retrieve a field from scratchpad,Data retrieval
+Scratchpad Module,Data Management,20.1.5,validate_scratchpad,Method to validate the scratchpad structure,Data validation
+Scratchpad Module,Data Management,20.1.6,reset_scratchpad,Method to reset scratchpad to initial state,Data reset
+Scratchpad Module,Data Forms,20.2.1,ScratchpadForm Class,Pydantic model defining the structure of scratchpad data,Data structure
+Scratchpad Module,Field Entries,20.3.1,FieldEntry Class,Class representing a single field entry in scratchpad,Data structure
+Scratchpad Module,Metadata,20.4.1,update_metadata,Method to update metadata for scratchpad,Metadata management
+,,,,,
+Confirmation Module,Message Generation,21.1.1,ConfirmationGenerator Class,Format scratchpad into user-friendly confirmation message,Message generation
+Confirmation Module,Message Generation,21.1.2,generate_confirmation,Method to generate confirmation message from scratchpad,Message generation
+Confirmation Module,Message Generation,21.1.3,format_customer_details,Method to format customer details for confirmation,Message formatting
+Confirmation Module,Message Generation,21.1.4,format_vehicle_details,Method to format vehicle details for confirmation,Message formatting
+Confirmation Module,Message Generation,21.1.5,format_appointment_details,Method to format appointment details for confirmation,Message formatting
+,,,,,
+Service Request Module,Request Building,22.1.1,ServiceRequest Class,Model for backend booking request from confirmed scratchpad,Request structure
+Service Request Module,Request Building,22.1.2,ServiceRequestBuilder Class,Builder class to construct service request from scratchpad,Request building
+Service Request Module,Request Building,22.1.3,build_request,Method to build request from scratchpad data,Request building
+Service Request Module,Validation,22.2.1,validate_request,Method to validate service request,Request validation
+,,,,,
+State Manager Module,State Machine,23.1.1,BookingState Enum,Define possible states in booking conversation,State definition
+State Manager Module,State Machine,23.1.2,BookingStateMachine Class,Track conversation state through booking flow,State management
+State Manager Module,State Machine,23.1.3,get_current_state,Method to get current booking state,State retrieval
+State Manager Module,State Machine,23.1.4,transition_state,Method to transition to a new state,State transition
+State Manager Module,State Machine,23.1.5,validate_state_transition,Method to validate state transitions,State validation
+,,,,,
+Confirmation Handler Module,Confirmation Handling,24.1.1,ConfirmationAction Enum,Define possible actions on confirmation screen,Action definition
+Confirmation Handler Module,Confirmation Handling,24.1.2,ConfirmationHandler Class,Handle user actions on confirmation screen,Action handling
+Confirmation Handler Module,Confirmation Handling,24.1.3,handle_confirmation_action,Method to handle specific confirmation actions,Action handling
+Confirmation Handler Module,Confirmation Handling,24.1.4,process_edit_action,Method to handle edit confirmation action,Action processing
+Confirmation Handler Module,Confirmation Handling,24.1.5,process_confirm_action,Method to handle confirm action,Action processing
+Confirmation Handler Module,Confirmation Handling,24.1.6,process_cancel_action,Method to handle cancel action,Action processing
+Confirmation Handler Module,Typo Handling,24.2.1,handle_typo_detection,Method to detect and handle typos in confirmation,Typo detection
+,,,,,
+Booking Detector Module,Intent Detection,25.1.1,BookingIntentDetector Class,Detect when user is ready to book,Intent detection
+Booking Detector Module,Keyword Matching,25.2.1,CONFIRMATION_TRIGGERS,List of trigger words indicating booking readiness,Keyword matching
+Booking Detector Module,Intent Detection,25.2.2,detect_booking_intent,Method to detect booking intent in user input,Intent detection
+Booking Detector Module,Intent Detection,25.2.3,is_confirmation_intent,Method to check if input indicates confirmation intent,Intent detection
+,,,,,
+Booking Flow Integration Module,Flow Orchestration,26.1.1,BookingFlowManager Class,High-level orchestration of all Phase 2 components,Flow orchestration
+Booking Flow Integration Module,Flow Orchestration,26.1.2,process_booking_flow,Method to process the entire booking flow,Flow processing
+Booking Flow Integration Module,Component Integration,26.2.1,integrate_scratchpad,Method to integrate scratchpad management,Component integration
+Booking Flow Integration Module,Component Integration,26.2.2,integrate_confirmation,Method to integrate confirmation generation,Component integration
+Booking Flow Integration Module,Component Integration,26.2.3,integrate_state_management,Method to integrate state management,Component integration
+Booking Flow Integration Module,Component Integration,26.2.4,integrate_intent_detection,Method to integrate intent detection,Component integration
+,,,,,
+,,,,,
+Bridge Module,,,,,
+Booking Orchestrator Bridge,Integration Bridge,27.1.1,Bridge Components,Integrate Phase 2 booking flow with Phase 1 orchestrator,Flow integration
+Booking Orchestrator Bridge,Integration Bridge,27.1.2,integrate_booking_flow,Function to integrate booking flow with main orchestrator,Flow integration
+Booking Orchestrator Bridge,Service Requests,27.2.1,handle_service_request,Function to handle service requests from booking flow,Service request handling
+Booking Orchestrator Bridge,Conversation Management,27.3.1,manage_conversation_state,Function to manage conversation state between phases,State management
+,,,,,
+,,,,,
+Conversation Script Manager,Personality Management,28.1.1,ConversationScriptManager Class,Provide state-specific scripts, goals, and personality traits,Personality management
+Conversation Script Manager,Script Management,28.2.1,get_script_for_state,Method to get script for specific conversation state,Script retrieval
+Conversation Script Manager,Personality Traits,28.3.1,get_personality_for_state,Method to get personality traits for state,Personality management
+Conversation Script Manager,Goal Management,28.4.1,get_goals_for_state,Method to get goals for specific state,Goal management
+,,,,,
+,,,,,
+PyWA Integration,Third-party Integration,29.1.1,PyWA Integration Functions,Example integration with pyWA WhatsApp chatbot,WhatsApp integration
+PyWA Integration,Message Handling,29.2.1,handle_whatsapp_message,Function to handle incoming WhatsApp messages,Message handling
+PyWA Integration,Response Sending,29.3.1,send_bot_response,Function to send bot response via WhatsApp,Response sending
+PyWA Integration,State Management,29.4.1,manage_conversation_state,Function to manage conversation state for WhatsApp,State management

@@ -1,0 +1,37 @@
+{
+  "service_request_id": "SR-D0FE2C90",
+  "conversation_id": "phase2_error_recovery_20251130_144720",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:49:10.565684",
+  "customer": {
+    "first_name": "Rahul",
+    "last_name": "Kumar",
+    "full_name": "Rahul Kumar",
+    "phone": "8765432109"
+  },
+  "vehicle": {
+    "phone": "8765432109",
+    "first_name": "Rahul",
+    "last_name": "Kumar",
+    "full_name": "Rahul Kumar",
+    "brand": "Maruti",
+    "model": "Baleno",
+    "plate": "TN10XY3456"
+  },
+  "appointment": {
+    "vehicle_brand": "Maruti",
+    "vehicle_model": "Baleno",
+    "vehicle_plate": "TN10XY3456",
+    "first_name": "Rahul",
+    "last_name": "Kumar",
+    "full_name": "Rahul Kumar",
+    "phone": "8765432109",
+    "service_type": "detailing",
+    "date": "2025-11-30"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

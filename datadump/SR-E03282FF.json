@@ -1,0 +1,36 @@
+{
+  "service_request_id": "SR-E03282FF",
+  "conversation_id": "phase2_reschedule_20251130_140022",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:02:55.530249",
+  "customer": {
+    "first_name": "Sneha",
+    "last_name": "Reddy",
+    "full_name": "Sneha Reddy",
+    "phone": "8765432109"
+  },
+  "vehicle": {
+    "phone": "8765432109",
+    "first_name": "Sneha",
+    "last_name": "Reddy",
+    "full_name": "Sneha Reddy",
+    "brand": "Maruti",
+    "model": "Baleno",
+    "plate": "DL04C5678"
+  },
+  "appointment": {
+    "vehicle_brand": "Maruti",
+    "vehicle_model": "Baleno",
+    "first_name": "Sneha",
+    "last_name": "Reddy",
+    "full_name": "Sneha Reddy",
+    "phone": "8765432109",
+    "vehicle_plate": "DL04C5678",
+    "date": "2025-11-30"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

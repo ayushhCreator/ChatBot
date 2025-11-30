@@ -1,0 +1,36 @@
+{
+  "service_request_id": "SR-7012AC27",
+  "conversation_id": "phase2_happy_path_20251130_123039",
+  "status": "confirmed",
+  "created_at": "2025-11-30T12:35:56.879669",
+  "customer": {
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "phone": "8888777766"
+  },
+  "vehicle": {
+    "phone": "8888777766",
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "brand": "Maruti",
+    "model": "Swift",
+    "plate": "TN10XY3456"
+  },
+  "appointment": {
+    "vehicle_brand": "Maruti",
+    "vehicle_model": "Swift",
+    "vehicle_plate": "TN10XY3456",
+    "first_name": "Amit",
+    "last_name": "Singh",
+    "full_name": "Amit Singh",
+    "phone": "8888777766",
+    "date": "2025-12-01"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

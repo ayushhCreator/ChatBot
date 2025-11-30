@@ -1,0 +1,38 @@
+{
+  "service_request_id": "SR-55B52C82",
+  "conversation_id": "phase2_negotiation_20251130_144101",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:44:05.951321",
+  "customer": {
+    "first_name": "Sir",
+    "full_name": "Sir None",
+    "last_name": "Joshi",
+    "phone": "9988776655"
+  },
+  "vehicle": {
+    "first_name": "Rohan",
+    "last_name": "Joshi",
+    "full_name": "Rohan Joshi",
+    "time_slot": "early_morning",
+    "plate": "9988776655",
+    "phone": "9988776655",
+    "brand": "Toyota",
+    "model": "Innova"
+  },
+  "appointment": {
+    "time_slot": "early_morning",
+    "vehicle_brand": "Toyota",
+    "vehicle_model": "Innova",
+    "first_name": "Rohan",
+    "full_name": "Rohan Joshi",
+    "last_name": "Joshi",
+    "phone": "9988776655",
+    "vehicle_plate": "DL04C5678",
+    "date": "2025-12-01"
+  },
+  "metadata": {
+    "completeness": 100.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}

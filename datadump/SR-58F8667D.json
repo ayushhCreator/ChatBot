@@ -1,0 +1,25 @@
+{
+  "service_request_id": "SR-58F8667D",
+  "conversation_id": "phase2_error_recovery_20251130_140320",
+  "status": "confirmed",
+  "created_at": "2025-11-30T14:05:10.815632",
+  "customer": {
+    "first_name": "Sneha",
+    "last_name": "Reddy",
+    "full_name": "Sneha Reddy",
+    "phone": "8888777766"
+  },
+  "vehicle": {
+    "brand": "Ford",
+    "model": "EcoSport",
+    "plate": "MH14ST7890"
+  },
+  "appointment": {
+    "date": "2025-11-30"
+  },
+  "metadata": {
+    "completeness": 50.0,
+    "confirmation_method": "chat",
+    "confirmation_mode": "CHAT"
+  }
+}
